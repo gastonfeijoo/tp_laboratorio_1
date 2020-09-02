@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <ctype.h>
+#include <windows.h>
 #include "arithmetic.h"
 int main()
 {
@@ -9,6 +10,8 @@ int main()
 int userOption;
 float firstOperand;
 float secondOperand;
+float resultAddition;
+float resultSubstraction;
 
 firstOperand=0;
 secondOperand=0;
@@ -29,28 +32,39 @@ do
     {
         case 1:
         system("cls");
-        printf("Opcion 1\nPresione cualquier tecla para volver al menu principal...");
-        getch();
+        printf("Ingrese el primer operando...");
+        scanf("%f",&firstOperand);
         system("cls");
         break;
 
         case 2:
         system("cls");
-        printf("Opcion 2\nPresione cualquier tecla para volver al menu principal...");
-        getch();
+        printf("Ingrese el segundo operando...");
+        scanf("%f",&secondOperand);
         system("cls");
         break;
 
         case 3:
         system("cls");
-        printf("Opcion 3\nPresione cualquier tecla para volver al menu principal...");
-        getch();
+        printf("a) Calcular la suma (A+B)\nb) Calcular la resta (A-B)\nc) Calcular la division (A/B)\nd) Calcular la multiplicacion\ne) Calcular el factorial (A*B)\nCalculando");
+        Sleep(1000);
+        printf(".");
+        Sleep(1000);
+        printf(".");
+        Sleep(1000);
+        printf(".\n");
+
+        resultAddition=SumaDosNumeros(firstOperand,secondOperand);
+        resultSubstraction=RestaDosNumeros(firstOperand,secondOperand);
+
+        printf("Calculos finalizados...\n");
+        Sleep(2000);
         system("cls");
         break;
 
         case 4:
         system("cls");
-        printf("Opcion 4\nPresione cualquier tecla para volver al menu principal...");
+        printf("a) El resultado es %.2f\nb) El resultado es %.2f\n",resultAddition,resultSubstraction);
         getch();
         system("cls");
         break;
