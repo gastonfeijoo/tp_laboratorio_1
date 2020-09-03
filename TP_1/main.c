@@ -12,6 +12,10 @@ float firstOperand;
 float secondOperand;
 float resultAddition;
 float resultSubstraction;
+float resultMultiplication;
+float resultDivision;
+unsigned long long resultFactorialFirstOperand;
+unsigned long long resultFactorialSecondOperand;
 
 firstOperand=0;
 secondOperand=0;
@@ -47,24 +51,28 @@ do
         case 3:
         system("cls");
         printf("a) Calcular la suma (A+B)\nb) Calcular la resta (A-B)\nc) Calcular la division (A/B)\nd) Calcular la multiplicacion\ne) Calcular el factorial (A*B)\nCalculando");
+
+        for (int i=0;i<4;i++)
+{
         Sleep(1000);
         printf(".");
-        Sleep(1000);
-        printf(".");
-        Sleep(1000);
-        printf(".\n");
+}
 
         resultAddition=SumaDosNumeros(firstOperand,secondOperand);
         resultSubstraction=RestaDosNumeros(firstOperand,secondOperand);
+        resultMultiplication=MultiplicacionDosNumeros(firstOperand,secondOperand);
+        resultDivision=DivideDosNumeros(firstOperand,secondOperand);
+        resultFactorialFirstOperand=CalculaFactorial(firstOperand);
+        resultFactorialSecondOperand=CalculaFactorial(secondOperand);
 
-        printf("Calculos finalizados...\n");
+        printf("\nCalculos finalizados...\n");
         Sleep(2000);
         system("cls");
         break;
 
         case 4:
         system("cls");
-        printf("a) El resultado es %.2f\nb) El resultado es %.2f\n",resultAddition,resultSubstraction);
+        printf("a) El resultado es %.2f\nb) El resultado es %.2f\nc) El resultado es %.2f\nd) El resultado es %.2f\ne) El resultado de %.2f es %llu y el resultado de %.2f es %llu\n",resultAddition,resultSubstraction,resultDivision,resultMultiplication,firstOperand,resultFactorialFirstOperand,secondOperand,resultFactorialSecondOperand);
         getch();
         system("cls");
         break;
