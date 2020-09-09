@@ -1,4 +1,5 @@
 #include "arithmetic.h"
+#include <stdio.h>
 
 float SumaDosNumeros(float firstOperand,float secondOperand)
 {
@@ -33,6 +34,7 @@ float DivideDosNumeros(float firstOperand,float secondOperand){
         result = (float)firstOperand/(float)secondOperand;
     }
     else{
+        printf("No se puede dividir por 0");
         result=0;
     }
     return result;

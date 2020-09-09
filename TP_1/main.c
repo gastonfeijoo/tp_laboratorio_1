@@ -21,7 +21,9 @@ firstOperand=0;
 secondOperand=0;
 
 do
-{
+
+{ //validar ingreso datos!!
+
     printf("1. Ingresar 1. Ingresar 1er operando (A=%.2f)\n2. Ingresar 2do Operando(B=%.2f)\n3. Calcular todas las operaciones\n4. Informar resultados\n5. Salir\n\n",firstOperand,secondOperand);
     scanf("%d",&userOption);
     fflush(stdin);

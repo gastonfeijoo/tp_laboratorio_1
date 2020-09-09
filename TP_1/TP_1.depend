@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1599100967 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp_1\arithmetic.c
+1599142546 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp_1\arithmetic.c
 	"arithmetic.h"
+	<stdio.h>
 
 1599100967 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp_1\arithmetic.h
 
