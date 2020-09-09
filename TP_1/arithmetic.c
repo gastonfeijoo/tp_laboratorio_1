@@ -40,10 +40,10 @@ float DivideDosNumeros(float firstOperand,float secondOperand){
     return result;
 }
 
-unsigned long long int CalculaFactorial(float number){
+unsigned long int CalculaFactorial(float number){
 
 int i;
-unsigned long long int result;
+unsigned long int result;
 
 result=number;
 
