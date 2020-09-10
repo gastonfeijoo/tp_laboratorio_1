@@ -19,6 +19,7 @@ unsigned long resultFactorialSecondOperand;
 
 int operandOneEnteredFlag;
 int operandTwoEnteredFlag;
+int resultsCalculated;
 
 //inicializo variables
 firstOperand=0;
@@ -27,6 +28,7 @@ secondOperand=0;
 //inicializo banderas y contadores
 operandOneEnteredFlag=0;
 operandTwoEnteredFlag=0;
+resultsCalculated=0;
 
 do
 
@@ -84,19 +86,15 @@ do
         system("cls");
         if (operandOneEnteredFlag&&operandTwoEnteredFlag){
             printf("a) Calcular la suma (A+B)\nb) Calcular la resta (A-B)\nc) Calcular la division (A/B)\nd) Calcular la multiplicacion\ne) Calcular el factorial (A*B)\nCalculando");
-            for (int i=0;i<4;i++)
-            {
-                Sleep(500);
-                printf(".");
-            }
-            printf("\nCalculos finalizados...\n");
-            Sleep(2000);
             resultAddition=SumaDosNumeros(firstOperand,secondOperand);
             resultSubstraction=RestaDosNumeros(firstOperand,secondOperand);
             resultMultiplication=MultiplicacionDosNumeros(firstOperand,secondOperand);
             resultDivision=DivideDosNumeros(firstOperand,secondOperand);
             resultFactorialFirstOperand=CalculaFactorial(firstOperand);
             resultFactorialSecondOperand=CalculaFactorial(secondOperand);
+            resultsCalculated=1;
+            printf("\nCalculos finalizados...\n");
+            Sleep(1000);
         }
         else{
             printf("Faltan Ingresar un operando.\nPresione cualquier tecla para regresar el menu principal");
@@ -107,10 +105,40 @@ do
         //Opcion 4  - Muestra los resultados
         case 4:
         system("cls");
-        printf("a) El resultado de la suma es %.2f\nb) El resultado de la resta es %.2f\nc) El resultado de la division es %.2f\nd) El resultado de la multiplicacion %.2f\n",resultAddition,resultSubstraction,resultDivision,resultMultiplication);
+        if (resultsCalculated==1)
+        {
+            printf("a) El resultado de la suma es %.2f\nb) El resultado de la resta es %.2f\n",resultAddition,resultSubstraction);
+            if (resultDivision!=0){
+                printf("c) El resultado de la division es %.2f\n",resultDivision);
+            }
+            else
+            {
+                printf("c) No se puede dividir por cero\n");
+            }
+            printf("d) El resultado de la multiplicacion %.2f\n",resultMultiplication);
+            //controla el maximo numero que puede calcular el factorial
+            if (firstOperand>12 || resultFactorialFirstOperand==0){
+                printf("e) El factorial de %.2f no se puede calcular",firstOperand);
+            }
+            else
+            {
+                printf("e) El factorial de %.2f es %lu",firstOperand,resultFactorialFirstOperand);
+            }
+            if (secondOperand>12||resultFactorialSecondOperand==0)
+            {
+                printf(" y El factorial de %.2f no se puede calcular",secondOperand);
+            }
+            else
+            {
+                printf(" y el factorial de %.2f es %lu",secondOperand,resultFactorialSecondOperand);
+            }
 
-        printf("e) El factorial de %.2f es %lu y el factorial de %.2f es %lu \n",firstOperand,resultFactorialFirstOperand,secondOperand,resultFactorialSecondOperand);
-
+        }
+        else
+        {
+            printf("No se elegido la opcion de realizar los calculos...");
+        }
+        printf("\npresione cualquier tecla para continuar...");
         getch();
         system("cls");
         break;
