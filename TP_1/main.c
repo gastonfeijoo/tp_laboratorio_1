@@ -150,9 +150,5 @@ do
     }
 } while (userOption!=5);
 
-/*
-system("cls");
-printf("Presione cualquier tecla para continuar...");
-getch();
-*/
+
 }
