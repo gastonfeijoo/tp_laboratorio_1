@@ -86,15 +86,15 @@ do
         system("cls");
         if (operandOneEnteredFlag&&operandTwoEnteredFlag){
             printf("a) Calcular la suma (A+B)\nb) Calcular la resta (A-B)\nc) Calcular la division (A/B)\nd) Calcular la multiplicacion\ne) Calcular el factorial (A*B)\nCalculando");
-            resultAddition=SumaDosNumeros(firstOperand,secondOperand);
-            resultSubstraction=RestaDosNumeros(firstOperand,secondOperand);
-            resultMultiplication=MultiplicacionDosNumeros(firstOperand,secondOperand);
-            resultDivision=DivideDosNumeros(firstOperand,secondOperand);
-            resultFactorialFirstOperand=CalculaFactorial(firstOperand);
-            resultFactorialSecondOperand=CalculaFactorial(secondOperand);
+            resultAddition=AddTwoNumbers(firstOperand,secondOperand);
+            resultSubstraction=SubstractTwoNumbers(firstOperand,secondOperand);
+            resultMultiplication=MultiplyTwoNumbers(firstOperand,secondOperand);
+            resultDivision=DivideTwoNumbers(firstOperand,secondOperand);
+            resultFactorialFirstOperand=CalculateFactorial(firstOperand);
+            resultFactorialSecondOperand=CalculateFactorial(secondOperand);
             resultsCalculated=1;
-            printf("\nCalculos finalizados...\n");
-            Sleep(1000);
+            printf("\nCalculos finalizados...Presione cualquier tecla para continuar\n");
+            getch();
         }
         else{
             printf("Faltan Ingresar un operando.\nPresione cualquier tecla para regresar el menu principal");

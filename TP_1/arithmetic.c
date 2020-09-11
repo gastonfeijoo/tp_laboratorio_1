@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float SumaDosNumeros(float firstOperand,float secondOperand)
+float AddTwoNumbers(float firstOperand,float secondOperand)
 {
 int result;
 
@@ -11,7 +11,7 @@ result=firstOperand+secondOperand;
 return result;
 }
 
-float RestaDosNumeros(float firstOperand,float secondOperand)
+float SubstractTwoNumbers(float firstOperand,float secondOperand)
 {
 int result;
 
@@ -20,7 +20,7 @@ result=firstOperand-secondOperand;
 return result;
 }
 
-float MultiplicacionDosNumeros(float firstOperand,float secondOperand)
+float MultiplyTwoNumbers(float firstOperand,float secondOperand)
 {
 int result;
 
@@ -29,7 +29,7 @@ result=firstOperand*secondOperand;
 return result;
 }
 
-float DivideDosNumeros(float firstOperand,float secondOperand){
+float DivideTwoNumbers(float firstOperand,float secondOperand){
     float result;
     if(secondOperand!=0){
         result = (float)firstOperand/(float)secondOperand;
@@ -40,7 +40,7 @@ float DivideDosNumeros(float firstOperand,float secondOperand){
     return result;
 }
 
-unsigned long int CalculaFactorial(float number){
+unsigned long int CalculateFactorial(float number){
 
 int i;
 unsigned long int result;
