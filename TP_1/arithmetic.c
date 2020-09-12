@@ -4,7 +4,7 @@
 
 float AddTwoNumbers(float firstOperand,float secondOperand)
 {
-int result;
+float result;
 
 result=firstOperand+secondOperand;
 
@@ -13,7 +13,7 @@ return result;
 
 float SubstractTwoNumbers(float firstOperand,float secondOperand)
 {
-int result;
+float result;
 
 result=firstOperand-secondOperand;
 
@@ -22,7 +22,7 @@ return result;
 
 float MultiplyTwoNumbers(float firstOperand,float secondOperand)
 {
-int result;
+float result;
 
 result=firstOperand*secondOperand;
 
@@ -53,7 +53,12 @@ if (number<0 || fmodf(number,1)==0){
     {
         result=1;
     }
-    else{
+    else if (number>12)
+    {
+        result=0;
+    }
+    else
+    {
         for (i=number;i>1;i--)
         {
             result=result*(i-1);
