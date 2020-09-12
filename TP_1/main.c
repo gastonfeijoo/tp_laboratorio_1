@@ -6,8 +6,8 @@
 #include "arithmetic.h"
 
 int UserMenuOption (float firstOperand, float secondOperand, int operandOneEnteredFlag,int operandTwoEnteredFlag);
-float EnterOperand (float operand, int enteredOperandFlag, char messageInputOperand[]);
-void PrintResults();
+void EnterOperand (float operand, int enteredOperandFlag, char messageInputOperand[],float getOperand[]);
+
 
 int main()
 {
@@ -21,6 +21,7 @@ int main()
     float resultDivision;
     unsigned long resultFactorialFirstOperand;
     unsigned long resultFactorialSecondOperand;
+    float getOperand[2];
 
     int operandOneEnteredFlag;
     int operandTwoEnteredFlag;
@@ -36,10 +37,8 @@ int main()
     resultsCalculated=0;
 
     do
-
-    { //validar ingreso datos!!
-
-        //menu de usuario y seleccion de opcion
+    {
+    //menu de usuario y seleccion de opcion
         userOption=UserMenuOption(firstOperand,secondOperand,operandOneEnteredFlag,operandTwoEnteredFlag);
 
 
@@ -56,15 +55,21 @@ int main()
         {
             //Opcion 1  - Ingresa el primer operando
             case 1:
-
-                firstOperand=EnterOperand(firstOperand,operandOneEnteredFlag,"primer");
+                //llamo la funcion para obtener Operando
+                EnterOperand(firstOperand,operandOneEnteredFlag,"primer",getOperand);
+                //el indice cero del array es el operando obtenido
+                firstOperand=getOperand[0];
                 operandOneEnteredFlag=1;
+                //el indice uno del array me indica si reemplazo un operando y debe recalcular con opcion 3
+                resultsCalculated=getOperand[1];
                 break;
 
             //Opcion 2  - Ingresa el Segundo operando
             case 2:
-                secondOperand=EnterOperand(secondOperand,operandTwoEnteredFlag,"segundo");
+                EnterOperand(secondOperand,operandTwoEnteredFlag,"segundo",getOperand);
+                secondOperand=getOperand[0];
                 operandTwoEnteredFlag=1;
+                resultsCalculated=getOperand[1];
                 break;
 
             //Opcion 3  - Hace los calculos
@@ -177,10 +182,12 @@ int UserMenuOption (float firstOperand, float secondOperand, int operandOneEnter
  * \param operand float el operando a solicitar (en caso de reemplazo, si elige que no se devuelve este numero
  * \param enteredOperandFlag int Bandera que indica si ya ingreso un operando
  * \param messageInputOperand[] char Cadena de texto que indica el numero de operando a ingresar
+ * \param getOperand[] float Array para devolver dos valores de la funcion. El indice cero es el operando ingreso y el indice uno si es
+ * 0 debe recalcular con opcion 3. Si es 1 no debe recalcular porque no reemplazo operando
  * \return  operandEntered float El operando ingresado por el usuario o si decidio no reemplazarlo el operando ya ingresado anteriormente
  *
  */
-float EnterOperand (float operand, int enteredOperandFlag, char messageInputOperand[])
+void EnterOperand (float operand, int enteredOperandFlag, char messageInputOperand[],float getOperand[])
 {
     float operandEntered;
     char replaceOption;
@@ -202,12 +209,20 @@ float EnterOperand (float operand, int enteredOperandFlag, char messageInputOper
         system("cls");
         printf("Ingrese el %s operando...",messageInputOperand);
         scanf("%f",&operandEntered);
+        getOperand[0]=operandEntered;
+        if (tolower(replaceOption)=='s')
+        {
+            getOperand[1]=0;
+        }
+
         system("cls");
     }
     else
     {
-        operandEntered=operand;
+        getOperand[0]=operand;
+        getOperand[1]=1;
+
     }
+
     system("cls");
-    return operandEntered;
 }
