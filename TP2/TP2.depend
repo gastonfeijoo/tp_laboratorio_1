@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1601259592 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\strings.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"strings.h"
+
+1601239976 d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\strings.h
+
+1601002050 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\usermenu.c
+	"userMenu.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	<windows.h>
+
+1600738427 d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\usermenu.h
+
+1601603322 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+
+1601323215 d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\arrayemployees.h
+
+1601604758 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+	"strings.h"
+	"userMenu.h"
+
+1601604549 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\arrays.c
+	"arrays.h"
+
+1601604535 d:\users\gabriela\google drive\gaston utn\programacion i\tp2\tp2\arrays.h
+
+1601603322 source:d:\utn\programacion_1\tp2\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+	<stdio.h>
+	<stdlib.h>
+
+1601323215 d:\utn\programacion_1\tp2\tp2\arrayemployees.h
+
+1601604549 source:d:\utn\programacion_1\tp2\tp2\arrays.c
+	"arrays.h"
+
+1601604535 d:\utn\programacion_1\tp2\tp2\arrays.h
+
+1601616205 source:d:\utn\programacion_1\tp2\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayEmployees.h"
+	"strings.h"
+	"userMenu.h"
+
+1601615510 d:\utn\programacion_1\tp2\tp2\strings.h
+
+1600738427 d:\utn\programacion_1\tp2\tp2\usermenu.h
+
+1601616222 source:d:\utn\programacion_1\tp2\tp2\strings.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"strings.h"
+
+1601002050 source:d:\utn\programacion_1\tp2\tp2\usermenu.c
+	"userMenu.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	<windows.h>
+
