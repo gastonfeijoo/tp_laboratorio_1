@@ -7,6 +7,15 @@
 #include "userMenu.h"
 #include "strings.h"
 
+/** \brief Creates an options menu.
+ *
+ * \param optionsNumber int
+ * \param optionText char**
+ * \param optionChooseText[] char
+ * \param optionInvalidText[] char
+ * \return int
+ *
+ */
 int userMenuOption(int optionsNumber,char **optionText,char optionChooseText[],char optionInvalidText[])
 {
     int userOption;
@@ -37,6 +46,14 @@ int userMenuOption(int optionsNumber,char **optionText,char optionChooseText[],c
     return userOption;
 }
 
+/** \brief Input for Structure Elements
+ *
+ * \param list Employee*
+ * \param size int
+ * \param id int
+ * \return int
+ *
+ */
 int GetEmployeeData(Employee * list,int size, int id)
 {
     char * nameEmployee[50+1];
@@ -59,6 +76,14 @@ int GetEmployeeData(Employee * list,int size, int id)
     return returnStatus;
 }
 
+/** \brief Modifies values in structure elements
+ *
+ * \param list Employee*
+ * \param size int
+ * \param id int
+ * \return void
+ *
+ */
 void ModifyEmployeeData(Employee * list,int size,int id)
 {
     int userOption;
@@ -108,6 +133,11 @@ void ModifyEmployeeData(Employee * list,int size,int id)
     }while(userOption!=5);
 }
 
+/** \brief a simple press any key to continue
+ *
+ * \return void
+ *
+ */
 void PressAnyKey()
 {
 printf("\nPresione cualquier tecla para continuar\n");

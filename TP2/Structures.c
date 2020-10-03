@@ -2,6 +2,13 @@
 #define EMPTY 1
 #define FULL 0
 
+/** \brief Check if a structure is empty
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 int CheckStructureIsEmpty (Employee * list, int size)
 {
     int i;
@@ -18,6 +25,13 @@ int CheckStructureIsEmpty (Employee * list, int size)
     return returnStatus;
 }
 
+/** \brief Sort structure by isempty element. Puts full elements first and return record count
+ *
+ * \param list Employee*
+ * \param len int
+ * \return int
+ *
+ */
 int sortStructureFullElements(Employee* list, int len)
 {
 

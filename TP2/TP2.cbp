@@ -40,10 +40,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Structures.h" />
-		<Unit filename="arrays.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="arrays.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

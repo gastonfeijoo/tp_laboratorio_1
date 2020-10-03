@@ -5,12 +5,25 @@
 #include "strings.h"
 
 
+/** \brief Detects Backspace Key pressed in console and backups cursor
+ *
+ * \param i int
+ * \return int
+ *
+ */
 int InputCursorBackspace(int i){
 i--;
 printf(" \b\b");
 return i;
 }
 
+/** \brief Enter character into string
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 int InputCursorValidCharacter (char * string,int i, char aux){
 string[i]=aux;
 putch(string[i]);
@@ -18,12 +31,26 @@ i++;
 return i;
 }
 
+/** \brief check limit of cursor for shell like input
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 int InputCursorLimit (int i){
 putch(8);
 i--;
 return i;
 }
 
+/** \brief Shell-like function to get Strings The SizeString Parameter sets the limit of character user can enter
+ *
+ * \param string char*
+ * \param sizeString int
+ * \return void
+ *
+ */
 void GetString(char *string, int sizeString){
 
     int i;
@@ -57,6 +84,11 @@ void GetString(char *string, int sizeString){
     strdup(&string[0]);
 }
 
+/** \brief Shell-like function to get a Character
+ *
+ * \return char
+ *
+ */
 char GetCharacter(){
     char aux;
     char returnValue;
@@ -91,6 +123,12 @@ char GetCharacter(){
 }
 
 
+/** \brief Shell-like function to get Integer The SizeString Parameter sets the limit of character user can enter
+ *
+ * \param sizeString int
+ * \return int
+ *
+ */
 int GetNumberInteger(int sizeString){
     int i;
     char string[sizeString];
@@ -124,6 +162,12 @@ int GetNumberInteger(int sizeString){
     return atoi(string);
 }
 
+/** \brief Shell-like function to get Floats The SizeString Parameter sets the limit of character user can enter
+ *
+ * \param sizeString int
+ * \return float
+ *
+ */
 float GetNumberFloat(int sizeString){
     int i;
     char string[sizeString];
