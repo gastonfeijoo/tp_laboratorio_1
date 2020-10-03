@@ -77,39 +77,45 @@
 	<conio.h>
 	<windows.h>
 
-1601002050 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.c
-	"userMenu.h"
+1601701573 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	<conio.h>
 	<windows.h>
+	"userMenu.h"
+	"strings.h"
 
-1600738427 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.h
-
-1601679089 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrayemployees.c
+1601701599 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.h
 	"ArrayEmployees.h"
+
+1601707505 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrayemployees.c
+	"ArrayEmployees.h"
+	"strings.h"
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
 
-1601323215 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrayemployees.h
+1601696442 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrayemployees.h
 
 1601676693 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrays.c
 	"arrays.h"
 
-1601604535 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrays.h
+1601696442 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrays.h
 
-1601678457 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\main.c
+1601704973 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployees.h"
 	"strings.h"
 	"userMenu.h"
 
-1601659099 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.h
+1601705416 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.h
 
-1601673317 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.c
+1601706779 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>

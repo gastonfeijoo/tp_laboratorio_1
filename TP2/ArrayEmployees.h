@@ -1,3 +1,8 @@
+#ifndef ARRAYEMPLOYEES_H_INCLUDED
+#define ARRAYEMPLOYEES_H_INCLUDED
+
+
+
 struct
 {
 int id;
@@ -8,6 +13,7 @@ int sector;
 int isEmpty;
 }typedef Employee;
 
+#endif
 int initEmployees(Employee* list, int len);
 int addEmployee(Employee* list, int len, int id, char name[],char
 lastName[],float salary,int sector);

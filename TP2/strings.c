@@ -27,7 +27,6 @@ return i;
 void GetString(char *string, int sizeString){
 
     int i;
-    int j;
     char aux;
     i=0;
 
@@ -57,6 +56,40 @@ void GetString(char *string, int sizeString){
     string[i]='\0';
     strdup(&string[0]);
 }
+
+char GetCharacter(){
+    char aux;
+    char returnValue;
+    int i;
+    i=0;
+    while(i<1)
+    {
+        aux=getch();
+        if (i>0 && aux==8)
+        {
+            i=InputCursorBackspace(i);
+        }
+        else
+        {
+            if(aux>31)
+            {
+                putch(aux);
+                returnValue=aux;
+                i++;
+            }
+        }
+        if (aux==13)
+        {
+            break;
+        }
+        if (i==1)
+        {
+            i=InputCursorLimit(i);
+        }
+    }
+    return returnValue;
+}
+
 
 int GetNumberInteger(int sizeString){
     int i;

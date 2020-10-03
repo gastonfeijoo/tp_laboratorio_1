@@ -1,6 +1,10 @@
 #include "ArrayEmployees.h"
+#include "strings.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <ctype.h>
 #define EMPTY 1
 #define FULL 0
 
@@ -69,9 +73,7 @@ lastName[],float salary,int sector)
             strcpy(list[i].name,name);
             strcpy(list[i].lastName,lastName);
             returnStatus=0;
-            printf("\nlo que carga:%d %s %s %f %d %d\n",list[i].id,list[i].name,list[i].lastName,list[i].salary,list[i].sector,list[i].isEmpty);
-            printf("\nlos parametros %d %s %s %f %d %d \n",id,name,lastName,salary,sector,list[i].isEmpty);
-            //printf("estoy agregando registro\n el indice es %d\nel valor de is empty es %d",i,list[i].isEmpty);
+
 
             break;
         }
@@ -91,7 +93,18 @@ pointer received or employee not found]
 */
 int findEmployeeById(Employee* list, int len,int id)
 {
-return NULL;
+    int i;
+    int returnStatus;
+    i=0;
+    returnStatus=-1;
+    for (i=0;i<len;i++)
+    {
+        if (list[i].id==id && list[i].isEmpty==FULL)
+        {
+            returnStatus=i;
+        }
+    }
+    return returnStatus;
 }
 
 /** \brief Remove a Employee by Id (put isEmpty Flag in 1)
@@ -105,7 +118,31 @@ find a employee] - (0) if Ok
 */
 int removeEmployee(Employee* list, int len, int id)
 {
-return -1;
+    int idIndexPosition;
+    int returnStatus;
+    char userOption;
+    idIndexPosition=findEmployeeById(list,len,id);
+    if (idIndexPosition!=-1)
+    {
+        do
+        {
+            printf("Esta seguro de eliminar el legajo? S/N \n");
+            userOption=GetCharacter();
+            userOption=toupper(userOption);
+            if (userOption=='S')
+            {
+                list[idIndexPosition].isEmpty=EMPTY;
+                returnStatus=0;
+            }
+        }while(userOption!='S' && userOption!='N');
+    }
+    else
+    {
+        printf("Legajo no Encontrado \n");
+        returnStatus=-1;
+    }
+
+    return returnStatus;
 }
 
 /** \brief Sort the elements in the array of employees, the argument order
@@ -137,7 +174,7 @@ int printEmployees(Employee* list, int length)
     emptyListingFlag=0;
 
     printf("Nomina de empleados\n\n");
-    printf("ID    Nombre                                             Apellido                                           Salario         Sector\n");
+    printf("ID    Nombre                                             Apellido                                           Salario        Sector\n");
     for(i=0;i<length;i++)
     {
         if (list[i].isEmpty==FULL)

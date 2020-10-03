@@ -10,18 +10,13 @@
 int main()
 {
     int userOption;
+    int userOptionRemove;
     int returnStatus;
-    char  * nameEmployee[50+1];
-    char * lastNameEmployee[50+1];
-    float salaryEmployee;
-    int sectorEmployee;
     static int id;
-
     int returnAddEmployee;
-
+    Employee payroll[SIZE];
     id=1;
 
-    Employee payroll[SIZE];
     returnStatus=initEmployees(payroll,SIZE);
     if (returnStatus==0)
     {
@@ -34,16 +29,7 @@ int main()
             {
             case 1:
                 //system("cls");
-                printf("\nIngrese el nombre del empleado:\n");
-                GetString(nameEmployee,*(&nameEmployee+1)-nameEmployee);
-                printf("\nIngrese el apellido del empleado:\n");
-                GetString(lastNameEmployee,*(&lastNameEmployee+1)-lastNameEmployee);
-                printf("\nIngrese el salario del empleado:\n");
-                salaryEmployee=GetNumberFloat(14);
-                printf("\nIngrese el Sector del empleado:\n");
-                sectorEmployee=GetNumberInteger(4);
-                returnAddEmployee=addEmployee(payroll,SIZE,id,nameEmployee,lastNameEmployee,salaryEmployee,sectorEmployee);
-                printf("Status de Agregar %d\n",returnAddEmployee);
+                returnAddEmployee=GetEmployeeData(payroll,SIZE,id);
                 if(returnAddEmployee==0)
                 {
                     id++;
@@ -57,6 +43,9 @@ int main()
             case 2:
                 break;
             case 3:
+                printf("Ingrese el ID del empleado que desea eliminar\n");
+                userOptionRemove=GetNumberInteger(4);
+                removeEmployee(payroll,SIZE,userOptionRemove);
                 break;
             case 4:
                 printEmployees(payroll,SIZE);
