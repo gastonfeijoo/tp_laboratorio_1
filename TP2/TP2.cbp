@@ -36,6 +36,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ArrayEmployees.h" />
+		<Unit filename="Structures.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Structures.h" />
 		<Unit filename="arrays.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -9,3 +9,4 @@
 int userMenuOption(int optionsNumber,char **optionText,char optionChooseText[],char optionInvalidText[]);
 void userMenuOptionsActions();
 int GetEmployeeData(Employee * list,int size, int id);
+void ModifyEmployeeData(Employee * list,int size);

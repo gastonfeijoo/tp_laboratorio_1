@@ -58,3 +58,29 @@ int GetEmployeeData(Employee * list,int size, int id)
     returnStatus=addEmployee(list,size,id,nameEmployee,lastNameEmployee,salaryEmployee,sectorEmployee);
     return returnStatus;
 }
+
+void ModifyEmployeeData(Employee * list,int size)
+{
+    int userOption;
+    char * userMenuOptions[5][30]={{"NOMBRE","APELLIDO","SUELDO","SECTOR","VOLVER"}};
+    printf("Seleccione el campo a modificar\n");
+    do
+    {
+        userOption=userMenuOption(5,*userMenuOptions,"Elija una opcion...","Opcion Invalida...");
+        switch(userOption)
+        {
+        case 1:
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+            break;
+        case 5:
+            break;
+        }
+    }while(userOption!=5);
+}

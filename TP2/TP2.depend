@@ -77,7 +77,7 @@
 	<conio.h>
 	<windows.h>
 
-1601701573 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.c
+1601710187 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -87,7 +87,7 @@
 	"userMenu.h"
 	"strings.h"
 
-1601701599 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.h
+1601710187 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.h
 	"ArrayEmployees.h"
 
 1601707505 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrayemployees.c
@@ -106,12 +106,13 @@
 
 1601696442 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrays.h
 
-1601704973 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\main.c
+1601709028 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployees.h"
 	"strings.h"
 	"userMenu.h"
+	"Structures.h"
 
 1601705416 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.h
 
@@ -121,4 +122,10 @@
 	<conio.h>
 	<string.h>
 	"strings.h"
+
+1601708650 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\structures.h
+	"ArrayEmployees.h"
+
+1601708825 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\structures.c
+	"Structures.h"
 
