@@ -12,6 +12,7 @@ int main()
 {
     int userOption;
     int userOptionRemove;
+    int userOptionModify;
     int returnStatus;
     int payrollHasRecords;
     static int id;
@@ -27,6 +28,7 @@ int main()
         //usa doble llave por el bug GCC bug 53119 ref: https://gcc.gnu.org/bugzilla/show_bug.cgi?id=53119
         do
         {
+            printf("MENU PRINCIPAL\n\n");
             userOption=userMenuOption(5,*userMenuOptions,"Elija una opcion...","Opcion Invalida...");
             payrollHasRecords=CheckStructureIsEmpty(payroll,SIZE);
             if (payrollHasRecords==0 || (payrollHasRecords==-1 && (userOption==1 || userOption==5)))
@@ -34,7 +36,7 @@ int main()
                 switch(userOption)
                 {
                 case 1:
-                    //system("cls");
+                    system("cls");
                     returnAddEmployee=GetEmployeeData(payroll,SIZE,id);
                     if(returnAddEmployee==0)
                     {
@@ -44,26 +46,31 @@ int main()
                     {
                         printf("Capacidad maxima de empleados alcanzada\n");
                     }
-                    //system("cls");
+                    PressAnyKey();
                     break;
                 case 2:
-                    ModifyEmployeeData(payroll,SIZE);
+                    printf("Ingrese el ID del empleado que desea modificar\n");
+                    userOptionModify=GetNumberInteger(4);
+                    ModifyEmployeeData(payroll,SIZE,userOptionModify);
                     break;
                 case 3:
                     printf("Ingrese el ID del empleado que desea eliminar\n");
                     userOptionRemove=GetNumberInteger(4);
                     removeEmployee(payroll,SIZE,userOptionRemove);
+                    PressAnyKey();
                     break;
                 case 4:
                     printEmployees(payroll,SIZE);
+                    PressAnyKey();
                     break;
                 case 5:
                     break;
                 }
             }
-            else
+            else if (userOption>1 || userOption<5)
             {
                 printf("Opcion Invalida, no hay empleados en la nomina\n");
+                PressAnyKey();
             }
         }while(userOption!=5);
     }

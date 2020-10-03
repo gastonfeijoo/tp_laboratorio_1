@@ -30,8 +30,8 @@ int userMenuOption(int optionsNumber,char **optionText,char optionChooseText[],c
         {
             printf("%s\n",optionInvalidText);
             sleep(1);
-            system("cls");
         }
+            system("cls");
     }while(userOption>optionsNumber);
 
     return userOption;
@@ -59,28 +59,58 @@ int GetEmployeeData(Employee * list,int size, int id)
     return returnStatus;
 }
 
-void ModifyEmployeeData(Employee * list,int size)
+void ModifyEmployeeData(Employee * list,int size,int id)
 {
     int userOption;
+    char * nameEmployee[50+1];
+    char * lastNameEmployee[50+1];
+    float salaryEmployee;
+    int sectorEmployee;
+    int returnStatus;
     char * userMenuOptions[5][30]={{"NOMBRE","APELLIDO","SUELDO","SECTOR","VOLVER"}};
-    printf("Seleccione el campo a modificar\n");
+    printf("\nSeleccione el campo a modificar\n");
     do
     {
         userOption=userMenuOption(5,*userMenuOptions,"Elija una opcion...","Opcion Invalida...");
         switch(userOption)
         {
         case 1:
+            printf("El nombre actual es : %s\n",list[findEmployeeById(list,size,id)].name);
+            printf("\nIngrese el nuevo nombre del empleado:\n");
+            GetString(nameEmployee,*(&nameEmployee+1)-nameEmployee);
+            strcpy(list[findEmployeeById(list,size,id)].name,nameEmployee);
+            PressAnyKey();
             break;
         case 2:
-
+            printf("El apellido actual es : %s\n",list[findEmployeeById(list,size,id)].lastName);
+            printf("\nIngrese el nuevo apellido del empleado:\n");
+            GetString(nameEmployee,*(&nameEmployee+1)-nameEmployee);
+            strcpy(list[findEmployeeById(list,size,id)].lastName,nameEmployee);
+            PressAnyKey();
             break;
         case 3:
-
+            printf("El sueldo actual es : %.2f\n",list[findEmployeeById(list,size,id)].salary);
+            printf("\nIngrese el nuevo sueldo del empleado:\n");
+            salaryEmployee=GetNumberFloat(14);
+            list[findEmployeeById(list,size,id)].salary=salaryEmployee;
+            PressAnyKey();
             break;
         case 4:
+            printf("El sector actual es : %d\n",list[findEmployeeById(list,size,id)].sector);
+            printf("\nIngrese el nuevo sector del empleado:\n");
+            sectorEmployee=GetNumberFloat(14);
+            list[findEmployeeById(list,size,id)].sector=sectorEmployee;
+            PressAnyKey();
             break;
         case 5:
             break;
         }
     }while(userOption!=5);
+}
+
+void PressAnyKey()
+{
+printf("\nPresione cualquier tecla para continuar\n");
+getch();
+system("cls");
 }

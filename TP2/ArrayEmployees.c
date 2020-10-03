@@ -1,5 +1,6 @@
 #include "ArrayEmployees.h"
 #include "strings.h"
+#include "Structures.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -126,7 +127,7 @@ int removeEmployee(Employee* list, int len, int id)
     {
         do
         {
-            printf("Esta seguro de eliminar el legajo? S/N \n");
+            printf("\nEsta seguro de eliminar el legajo? S/N \n");
             userOption=GetCharacter();
             userOption=toupper(userOption);
             if (userOption=='S')
@@ -138,7 +139,10 @@ int removeEmployee(Employee* list, int len, int id)
     }
     else
     {
-        printf("Legajo no Encontrado \n");
+        printf("\nLegajo no Encontrado \n");
+        printf("\nPresione cualquier tecla para continuar\n");
+        getch();
+        system("cls");
         returnStatus=-1;
     }
 
@@ -156,6 +160,45 @@ indicate UP or DOWN order
 */
 int sortEmployees(Employee* list, int len, int order)
 {
+
+Employee aux;
+
+int recordCount;
+int i;
+int j;
+int k;
+recordCount=sortStructureFullElements(list,len);
+
+
+for (i=0;i<recordCount-1;i++)
+{
+    for (j=i+1;j<recordCount;j++)
+    {
+        if (strcmp(list[i].lastName,list[j].lastName)>0)
+        {
+            aux=list[i];
+            list[i]=list[j];
+            list[j]=aux;
+        }
+    }
+}
+i=0;
+j=0;
+
+for (i=0;i<recordCount-1;i++)
+{
+    for (j=i+1;j<recordCount;j++)
+    {
+        if (list[i].sector>list[j].sector)
+        {
+            aux=list[i];
+            list[i]=list[j];
+            list[j]=aux;
+        }
+    }
+}
+
+
 return 0;
 }
 
@@ -169,24 +212,28 @@ return 0;
 int printEmployees(Employee* list, int length)
 {
     int i;
-    int emptyListingFlag;
+    int emptyPayroll;
     i=0;
-    emptyListingFlag=0;
+    emptyPayroll=CheckStructureIsEmpty(list,length);
 
     printf("Nomina de empleados\n\n");
-    printf("ID    Nombre                                             Apellido                                           Salario        Sector\n");
-    for(i=0;i<length;i++)
-    {
-        if (list[i].isEmpty==FULL)
-        {
-            printf("%-4d  %-50s %-50s %-14.2f %-8d\n",list[i].id,list[i].name,list[i].lastName,list[i].salary,list[i].sector);
-            emptyListingFlag=1;
-        }
-    }
-    printf("Fin de la nomina\n\n");
-    if (emptyListingFlag==0)
+    if (emptyPayroll==-1)
     {
         printf("No hay empleados en la nomina\n");
     }
+    else
+    {
+    sortEmployees(list,length,0);
+    printf("ID    Nombre                                             Apellido                                           Salario        Sector\n");
+        for(i=0;i<length;i++)
+        {
+            if (list[i].isEmpty==FULL)
+            {
+                printf("%-4d  %-50s %-50s %-14.2f %-8d\n",list[i].id,list[i].name,list[i].lastName,list[i].salary,list[i].sector);
+            }
+        }
+    }
+    printf("Fin de la nomina\n\n");
+
     return 0;
 }

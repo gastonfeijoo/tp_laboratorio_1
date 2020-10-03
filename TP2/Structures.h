@@ -6,3 +6,4 @@
 #endif // STRUCTURES_H_INCLUDED
 
 int CheckStructureIsEmpty (Employee * list, int size);
+int sortStructureFullElements(Employee* list, int len);

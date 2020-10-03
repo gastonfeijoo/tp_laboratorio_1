@@ -17,3 +17,34 @@ int CheckStructureIsEmpty (Employee * list, int size)
     }
     return returnStatus;
 }
+
+int sortStructureFullElements(Employee* list, int len)
+{
+
+    Employee aux;
+    int returnStatus;
+
+    returnStatus=0;
+    int i;
+    int j;
+
+    for (i=0;i<len-1;i++)
+    {
+        for (j=1;j<len;j++)
+        {
+            if (list[i].isEmpty<list[j].isEmpty)
+            {
+                aux=list[j];
+                list[j]=list[i];
+                list[j]=aux;
+            }
+        }
+        if(list[i].isEmpty==0)
+        {
+            returnStatus++;
+        }
+    }
+    return returnStatus;
+
+}
+
