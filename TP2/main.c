@@ -18,6 +18,7 @@ int main()
     static int id;
     int returnAddEmployee;
     Employee payroll[SIZE];
+    //declaro el array multidimensional para la funcion
     char * userMenuOptions[5][30]={{"ALTAS","MODIFICAR","BAJA","INFORMAR","SALIR"}};
     id=1;
     payrollHasRecords=0;

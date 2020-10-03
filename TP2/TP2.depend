@@ -77,7 +77,7 @@
 	<conio.h>
 	<windows.h>
 
-1601719336 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.c
+1601725702 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\usermenu.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -107,7 +107,7 @@
 
 1601696442 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\arrays.h
 
-1601718777 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\main.c
+1601725750 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\main.c
 	<stdio.h>
 	<stdlib.h>
 	"ArrayEmployees.h"
@@ -117,7 +117,7 @@
 
 1601705416 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.h
 
-1601706779 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.c
+1601725702 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\strings.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -127,6 +127,6 @@
 1601715883 d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\structures.h
 	"ArrayEmployees.h"
 
-1601716887 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\structures.c
+1601725702 source:d:\users\gabriela\google drive\gaston utn\programacion i\tp1\tp_laboratorio_1\tp2\structures.c
 	"Structures.h"
 

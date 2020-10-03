@@ -19,9 +19,10 @@ return i;
 
 /** \brief Enter character into string
  *
- * \param
- * \param
- * \return
+ * \param array to save string
+ * \param char * string index on character to save
+ * \param char aux the value obtained to save
+ * \return int i return index of next element in the string
  *
  */
 int InputCursorValidCharacter (char * string,int i, char aux){
@@ -33,9 +34,8 @@ return i;
 
 /** \brief check limit of cursor for shell like input
  *
- * \param
- * \param
- * \return
+ * \param  index position of string
+ * \return returns index position of string minus one (the backspace)
  *
  */
 int InputCursorLimit (int i){
@@ -46,8 +46,8 @@ return i;
 
 /** \brief Shell-like function to get Strings The SizeString Parameter sets the limit of character user can enter
  *
- * \param string char*
- * \param sizeString int
+ * \param string char* the array to save the characters as a string
+ * \param sizeString int the size or length of the input
  * \return void
  *
  */
@@ -86,7 +86,7 @@ void GetString(char *string, int sizeString){
 
 /** \brief Shell-like function to get a Character
  *
- * \return char
+ * \return char returns a char
  *
  */
 char GetCharacter(){
@@ -125,8 +125,8 @@ char GetCharacter(){
 
 /** \brief Shell-like function to get Integer The SizeString Parameter sets the limit of character user can enter
  *
- * \param sizeString int
- * \return int
+ * \param sizeString int length of input o quantity of digits allowed
+ * \return int return integer
  *
  */
 int GetNumberInteger(int sizeString){
@@ -162,10 +162,10 @@ int GetNumberInteger(int sizeString){
     return atoi(string);
 }
 
-/** \brief Shell-like function to get Floats The SizeString Parameter sets the limit of character user can enter
+/** \brief Shell-like function to get Floats The SizeString Parameter sets the limit of character user can enter. The dwcimal part is entered with a period
  *
- * \param sizeString int
- * \return float
+ * \param sizeString int lenght of the input
+ * \return float return floating point number
  *
  */
 float GetNumberFloat(int sizeString){

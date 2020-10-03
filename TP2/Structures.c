@@ -4,9 +4,9 @@
 
 /** \brief Check if a structure is empty
  *
- * \param
- * \param
- * \return
+ * \param Employee * structure to check
+ * \param int size size of structure array
+ * \return return -1 if structure array is empty, 0 is it has at least one record
  *
  */
 int CheckStructureIsEmpty (Employee * list, int size)
@@ -25,11 +25,11 @@ int CheckStructureIsEmpty (Employee * list, int size)
     return returnStatus;
 }
 
-/** \brief Sort structure by isempty element. Puts full elements first and return record count
+/** \brief Sort structure by isempty element. it Puts full elements first and return record count
  *
- * \param list Employee*
- * \param len int
- * \return int
+ * \param list Employee*  structure array to sort
+ * \param len int size of array
+ * \return int return record count
  *
  */
 int sortStructureFullElements(Employee* list, int len)

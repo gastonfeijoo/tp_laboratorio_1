@@ -9,11 +9,12 @@
 
 /** \brief Creates an options menu.
  *
- * \param optionsNumber int
- * \param optionText char**
- * \param optionChooseText[] char
- * \param optionInvalidText[] char
- * \return int
+ * \param optionsNumber int number of options to display
+ * \param optionText char** multidimensional array for storing options text. must declared like so
+            char * userMenuOptions[5][30]={{"ALTAS","MODIFICAR","BAJA","INFORMAR","SALIR"}};
+ * \param optionChooseText[] char message to direct the user to select an option
+ * \param optionInvalidText[] char message to show if invalid option is selected
+ * \return int returns the option selected as integer
  *
  */
 int userMenuOption(int optionsNumber,char **optionText,char optionChooseText[],char optionInvalidText[])
@@ -48,10 +49,10 @@ int userMenuOption(int optionsNumber,char **optionText,char optionChooseText[],c
 
 /** \brief Input for Structure Elements
  *
- * \param list Employee*
- * \param size int
- * \param id int
- * \return int
+ * \param list Employee* Structure array to load
+ * \param size int size of the array
+ * \param id int PK element
+ * \return int returns value from addEmployee() function
  *
  */
 int GetEmployeeData(Employee * list,int size, int id)
@@ -78,9 +79,9 @@ int GetEmployeeData(Employee * list,int size, int id)
 
 /** \brief Modifies values in structure elements
  *
- * \param list Employee*
- * \param size int
- * \param id int
+ * \param list Employee* Structure array to modfiy elements
+ * \param size int size of array
+ * \param id int pk field
  * \return void
  *
  */
