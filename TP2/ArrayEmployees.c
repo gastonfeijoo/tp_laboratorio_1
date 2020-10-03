@@ -52,8 +52,30 @@ Programación I – Laboratorio I
 int addEmployee(Employee* list, int len, int id, char name[],char
 lastName[],float salary,int sector)
 {
-
+    int i;
     int returnStatus;
+
+    returnStatus=-1;
+
+    for(i=0;i<len;i++)
+    {
+        if (list[i].isEmpty==EMPTY)
+        {
+
+            list[i].id=id;
+            list[i].salary=salary;
+            list[i].sector=sector;
+            list[i].isEmpty=FULL;
+            strcpy(list[i].name,name);
+            strcpy(list[i].lastName,lastName);
+            returnStatus=0;
+            printf("\nlo que carga:%d %s %s %f %d %d\n",list[i].id,list[i].name,list[i].lastName,list[i].salary,list[i].sector,list[i].isEmpty);
+            printf("\nlos parametros %d %s %s %f %d %d \n",id,name,lastName,salary,sector,list[i].isEmpty);
+            //printf("estoy agregando registro\n el indice es %d\nel valor de is empty es %d",i,list[i].isEmpty);
+
+            break;
+        }
+    }
 
 return returnStatus;
 }
@@ -109,5 +131,25 @@ return 0;
 */
 int printEmployees(Employee* list, int length)
 {
-return 0;
+    int i;
+    int emptyListingFlag;
+    i=0;
+    emptyListingFlag=0;
+
+    printf("Nomina de empleados\n\n");
+    printf("ID    Nombre                                             Apellido                                           Salario         Sector\n");
+    for(i=0;i<length;i++)
+    {
+        if (list[i].isEmpty==FULL)
+        {
+            printf("%-4d  %-50s %-50s %-14.2f %-8d\n",list[i].id,list[i].name,list[i].lastName,list[i].salary,list[i].sector);
+            emptyListingFlag=1;
+        }
+    }
+    printf("Fin de la nomina\n\n");
+    if (emptyListingFlag==0)
+    {
+        printf("No hay empleados en la nomina\n");
+    }
+    return 0;
 }

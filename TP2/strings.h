@@ -12,3 +12,4 @@ float GetNumberFloat();
 int InputCursorBackspace(int i);
 int InputCursorValidCharacter (char * string,int i, char aux);
 int InputCursorLimit (int i);
+
