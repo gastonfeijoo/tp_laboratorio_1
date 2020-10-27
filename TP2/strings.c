@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <string.h>
 #include "strings.h"
 
@@ -59,7 +58,7 @@ void GetString(char *string, int sizeString){
 
     while(i<sizeString-1)
     {
-        aux=getch();
+        aux=getc();
         if (i>0 && aux==8)
         {
             i=InputCursorBackspace(i);
