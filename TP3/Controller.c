@@ -7,7 +7,22 @@
 
 int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int returnStatus;
+    returnStatus=0;
+
+    FILE* pFile;
+
+    pFile=fopen(path,"r");
+
+    if (pFile!=NULL)
+    {
+        parser_EmployeeFromText(pFile,pArrayListEmployee);
+        returnStatus=1;
+    }
+
+    fclose(pFile);
+
+    return returnStatus;
 }
 
 

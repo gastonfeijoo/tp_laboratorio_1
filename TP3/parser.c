@@ -12,29 +12,23 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
     char horasTrabajadas[100];
     char sueldo[100];
     int rFscanF;
+    int returnStatus;
 
+    returnStatus=0;
+    //elimino encabezados
+    fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", id, nombre, horasTrabajadas,sueldo);
+        //printf("encabezado %s %s %s %s\n",id, nombre, horasTrabajadas,sueldo); //DEBUG
 
-    //ya viene abierto
-    //pFile=fopen("data.csv","r");
-
-    if (pFile==NULL)
-    {
-        return -1;
-    }
     while(!feof(pFile))
     {
-        rFscanF=fscanf(pFile, "%[^,],%[^,],%[^,],%[^,]\n", id, nombre, horasTrabajadas,sueldo);
+        rFscanF=fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", id, nombre, horasTrabajadas,sueldo);
+        //printf("encabezado %s %s %s %s\n",id, nombre, horasTrabajadas,sueldo);//DEBUG
         if (rFscanF==4)
         {
             Employee* pAux = employee_new();
-
-            //usar el constructor por parametros
-            employee_setId(pAux,atoi(id));
-            employee_setNombre(pAux,nombre);
-            employee_setHorasTrabajadas(pAux,atoi(horasTrabajadas));
-            employee_setSueldo(pAux,atoi(sueldo));
-            //
+            pAux=employee_newParametros(id,nombre,horasTrabajadas,sueldo);
             ll_add(pArrayListEmployee,pAux);
+            returnStatus=1;
         }
         else
         {
@@ -42,16 +36,14 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
         }
     }
 
-    fclose(pFile);
-
-    return 1;
+    return returnStatus;
 
 }
 
 int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
 
-
+/*
     char id[100];
     char nombre[100];
     char horasTrabajadas[100];
@@ -85,7 +77,7 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
     }
 
     fclose(pFile);
-
+*/
 
     return 1;
 }

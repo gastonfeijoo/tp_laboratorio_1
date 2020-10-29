@@ -25,13 +25,13 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
         employee_setHorasTrabajadas(pEmployee,atoi(horasTrabajadasStr));
         employee_setSueldo(pEmployee,atoi(sueldoStr));
     }
+    return pEmployee;
 }
 
 int employee_setId(Employee* this,int id)
 {
     int returnStatus;
     returnStatus=0;
-
     if (this!=NULL && id>0)
     {
         this->id=id;
@@ -43,7 +43,7 @@ int employee_getId(Employee* this,int* id)
 {
     int returnStatus;
     returnStatus=0;
-
+    //printf("employee_setId - %d _",this->id);//debug
     if(this!=NULL && id!=NULL)
     {
         *id=this->id;
@@ -73,7 +73,7 @@ int employee_getNombre(Employee* this,char* nombre)
 
     if(this!=NULL && nombre!=NULL)
     {
-        strcpy(*nombre,this->nombre);
+        strcpy(nombre,this->nombre);
         returnStatus=1;
     }
 
