@@ -12,6 +12,7 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
     char horasTrabajadas[100];
     char sueldo[100];
     int rFscanF;
+    int returnLlAdd;
     int returnStatus;
 
     returnStatus=0;
@@ -25,9 +26,16 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
         //printf("encabezado %s %s %s %s\n",id, nombre, horasTrabajadas,sueldo);//DEBUG
         if (rFscanF==4)
         {
-            Employee* pAux = employee_new();
+            Employee* pAux = employee_new(); //<-----lo deberia sacar de la estructura iterativa???
             pAux=employee_newParametros(id,nombre,horasTrabajadas,sueldo);
-            ll_add(pArrayListEmployee,pAux);
+            returnLlAdd=ll_add(pArrayListEmployee,pAux);
+
+            if (returnLlAdd!=0)
+            {
+                returnStatus=0;
+                break;
+            }
+
             returnStatus=1;
         }
         else
@@ -43,32 +51,24 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
 
-/*
-    char id[100];
-    char nombre[100];
-    char horasTrabajadas[100];
-    char sueldo[100];
     int rFread;
+    int returnStatus;
+    int returnLlAdd;
+    returnStatus=0;
 
-
-
-    pFile=fopen("data.csv","r");
-
-    if (pFile==NULL)
-    {
-        return -1;
-    }
     while(!feof(pFile))
     {
-        rFread=fread(pFile, "%[^,],%[^,],%[^,],%[^,]\n", id, nombre, horasTrabajadas,sueldo);
-        if (rFread==4)
+        Employee* pAux = employee_new();
+        rFread=fread(pAux,sizeof(Employee),1,pFile);
+        if (rFread==1)
         {
-            Employee* pAux = employee_new();
-            employee_setId(pAux,atoi(id));
-            employee_setNombre(pAux,nombre);
-            employee_setHorasTrabajadas(pAux,atoi(horasTrabajadas));
-            employee_setSueldo(pAux,atoi(sueldo));
-            ll_add(pArrayListEmployee,pAux);
+            returnLlAdd=ll_add(pArrayListEmployee,pAux);
+
+            if (returnLlAdd!=0)
+            {
+                returnStatus=0;
+                break;
+            }
         }
         else
         {
@@ -76,8 +76,9 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
         }
     }
 
-    fclose(pFile);
-*/
 
-    return 1;
+    fclose(pFile);
+
+
+    return returnStatus;
 }

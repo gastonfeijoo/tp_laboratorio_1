@@ -49,9 +49,6 @@ int ll_isEmpty(LinkedList* this);
 
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 
-
-
-
 int ll_set(LinkedList* this, int index,void* pElement); //reemplaza un elemento por otro Modificacion
 int ll_push(LinkedList* this, int index, void* pElement); //ingresa un elemente entre dos elementos
 void* ll_pop(LinkedList* this,int index); //remueve pero devuelve el dato

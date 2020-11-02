@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
@@ -26,37 +27,27 @@ int main()
   //Crear lista
     LinkedList* pEmployees;
     int len;
-    int i;
     char pathTxt[256];
     strcpy(pathTxt,"data.csv");
-
-    Employee* elementPEmployees;
+    char pathBin[256];
+    strcpy(pathBin,"data.bin");
 
     pEmployees = ll_newLinkedList();
 
-    controller_loadFromText(pathTxt,pEmployees);
-
     len = ll_len(pEmployees);
+
+  //  controller_loadFromText(pathTxt,pEmployees);
+    controller_loadFromBinary(pathBin,pEmployees);
+    len = ll_len(pEmployees);
+
+//  controller_saveAsBinary(pathBin,pEmployees);
 
     printf("Cantidad de elementos: %d\n", len);
 
-    int id;
-    char nombre[128];
-    int horasTrabajadas;
-    int sueldo;
+    controller_sortEmployee(pEmployees);
 
-    for(i=0;i<len;i++)
-    {
-        elementPEmployees=(Employee*)ll_get(pEmployees,i);
+    controller_ListEmployee(pEmployees);
 
-        employee_getId(elementPEmployees,&id);
-        employee_getNombre(elementPEmployees,nombre);
-        employee_getHorasTrabajadas(elementPEmployees,&horasTrabajadas);
-        employee_getSueldo(elementPEmployees,&sueldo);
-
-
-        printf("%-4d\t%-15s\t%-4d\t%-4d\t\n",id,nombre,horasTrabajadas,sueldo);
-    }
 
     return 0;
 }
