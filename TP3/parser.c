@@ -17,9 +17,10 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 
     returnStatus=0;
     //elimino encabezados
-    fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", id, nombre, horasTrabajadas,sueldo);
-        //printf("encabezado %s %s %s %s\n",id, nombre, horasTrabajadas,sueldo); //DEBUG
-
+    if (parser_HasHeader())
+    {
+        fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", id, nombre, horasTrabajadas,sueldo);
+    }
     while(!feof(pFile))
     {
         rFscanF=fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", id, nombre, horasTrabajadas,sueldo);
@@ -81,4 +82,16 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 
 
     return returnStatus;
+}
+
+int parser_HasHeader()
+{
+    int returnHeader;
+
+    returnHeader=userMenuOption(2,0,"El archivo CSV tiene encabezado?\n1. Si\n2. No\n0. Salir\n","Elija una opcion...","Opcion Invalida...");
+    if (returnHeader==2)
+    {
+        returnHeader=0;
+    }
+    return returnHeader;
 }

@@ -209,7 +209,7 @@
 	"LinkedList.h"
 	"Employee.h"
 
-1604357826 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\parser.c
+1604376619 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"LinkedList.h"
@@ -219,17 +219,18 @@
 
 1604354924 d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\employee.h
 
-1604358084 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\controller.c
+1604375696 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\controller.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"UI.h"
 	"LinkedList.h"
 	"Employee.h"
 	"parser.h"
 
 1561499216 d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\parser.h
 
-1604358153 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\employee.c
+1604372852 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\employee.c
 	<stdlib.h>
 	<stdio.h>
 	"Employee.h"
@@ -237,7 +238,7 @@
 	"utn.h"
 	<string.h>
 
-1602540377 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\utn.c
+1604363529 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -247,13 +248,24 @@
 1602524797 d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\utn.h
 	"utn.h"
 
-1604358395 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\main.c
+1604365388 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"LinkedList.h"
-	"Controller.h"
-	"Employee.h"
+	"UI.h"
 
 1561499216 d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\controller.h
+
+1604374976 d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\ui.h
+	"LinkedList.h"
+
+1604374679 source:d:\utn\onedrive\programacion_i\tps\tp_laboratorio_1\tp3\ui.c
+	<stdlib.h>
+	<stdio.h>
+	"Employee.h"
+	"LinkedList.h"
+	"Controller.h"
+	"utn.h"
+	<string.h>
 

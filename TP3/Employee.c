@@ -26,11 +26,21 @@ Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajad
     {
         returnSet=employee_setId(pEmployee,atoi(idStr));
         returnValidation(returnSet);
-        returnSet=employee_setNombre(pEmployee,nombreStr);
-        returnValidation(returnSet);
-        returnSet=employee_setHorasTrabajadas(pEmployee,atoi(horasTrabajadasStr));
-        returnValidation(returnSet);
-        returnSet=employee_setSueldo(pEmployee,atoi(sueldoStr));
+        if (returnSet)
+        {
+            returnSet=employee_setNombre(pEmployee,nombreStr);
+            returnValidation(returnSet);
+            if (returnSet)
+            {
+                returnSet=employee_setHorasTrabajadas(pEmployee,atoi(horasTrabajadasStr));
+                returnValidation(returnSet);
+                if (returnSet)
+                {
+                    returnSet=employee_setSueldo(pEmployee,atoi(sueldoStr));
+                    returnValidation(returnSet);
+                }
+            }
+        }
 
     }
 
@@ -145,16 +155,29 @@ int employee_CompareByName(Employee* e1, Employee* e2)
 {
     int returnCompare;
     returnCompare=0;
+    int returnGet;
+    char nombre1[128];
+    char nombre2[128];
 
-    if(strcmp(e1->nombre,e2->nombre)>0)
+    returnGet=employee_getNombre(e1,nombre1);
+    returnValidation(returnGet);
+    if (returnGet)
     {
-        returnCompare=1;
-    }
-    else
-    {
-        if(strcmp(e1->nombre,e2->nombre)<0)
+        returnGet=employee_getNombre(e1,nombre1);
+        returnValidation(returnGet);
+        if (returnGet)
         {
-            returnCompare=-1;
+            if(strcmp(nombre1,nombre2)>0)
+            {
+                returnCompare=1;
+            }
+            else
+            {
+                if(strcmp(nombre1,nombre2)<0)
+                {
+                    returnCompare=-1;
+                }
+            }
         }
     }
     return returnCompare;
@@ -162,17 +185,31 @@ int employee_CompareByName(Employee* e1, Employee* e2)
 int employee_CompareById(Employee* e1, Employee* e2)
 {
     int returnCompare;
+    int returnGet;
+    int id1;
+    int id2;
+
     returnCompare=0;
 
-    if(e1->id>e2->id)
+    returnGet=employee_getId(e1,&id1);
+    returnValidation(returnGet);
+    if (returnGet)
     {
-        returnCompare=1;
-    }
-    else
-    {
-        if(e1->id<e2->id)
+        returnGet=employee_getId(e2,&id2);
+        returnValidation(returnGet);
+        if (returnGet)
         {
-            returnCompare=-1;
+            if(id1>id2)
+            {
+                returnCompare=1;
+            }
+            else
+            {
+                if(id1<id2)
+                {
+                    returnCompare=-1;
+                }
+            }
         }
     }
     return returnCompare;

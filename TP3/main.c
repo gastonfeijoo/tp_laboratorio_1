@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "LinkedList.h"
-#include "Controller.h"
-#include "Employee.h"
+#include "UI.h"
 
 /****************************************************
     Menu:
@@ -19,34 +18,29 @@
     10. Salir
 *****************************************************/
 
-
+//break en todas las retornos de las validaciones
 
 int main()
 {
 
   //Crear lista
     LinkedList* pEmployees;
-    int len;
+    pEmployees = ll_newLinkedList();
+
+
     char pathTxt[256];
     strcpy(pathTxt,"data.csv");
     char pathBin[256];
     strcpy(pathBin,"data.bin");
 
-    pEmployees = ll_newLinkedList();
+    int userOption;
 
-    len = ll_len(pEmployees);
+    do
+    {
+        userOption=userMenuOption(10,0,"\n1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n2. Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n3. Alta de empleado\n4. Modificar datos de empleado\n5. Baja de empleado\n6. Listar empleados\n7. Ordenar empleados\n8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n9. Guardar los datos de los empleados en el archivo data.csv (modo binario).\n0. Salir","Elija una opcion...","Opcion Invalida...");
+        MenuMainSwitch(userOption,pEmployees,pathTxt,pathBin);
 
-  //  controller_loadFromText(pathTxt,pEmployees);
-    controller_loadFromBinary(pathBin,pEmployees);
-    len = ll_len(pEmployees);
-
-//  controller_saveAsBinary(pathBin,pEmployees);
-
-    printf("Cantidad de elementos: %d\n", len);
-
-    controller_sortEmployee(pEmployees);
-
-    controller_ListEmployee(pEmployees);
+    }while(userOption!=0);
 
 
     return 0;
