@@ -87,6 +87,10 @@ void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTx
         break;
     case 7: //ordenar
         returnSort=controller_sortEmployee(pArrayListEmployee);
+        if(returnSort==-1)
+        {
+            printf("No se pudo ordenar!\n");
+        }
         break;
     case 8: //guardar txt
         controller_saveAsText(pathTxt,pArrayListEmployee);

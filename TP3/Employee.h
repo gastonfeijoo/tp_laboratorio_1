@@ -26,8 +26,8 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 int employee_setSueldo(Employee* this,int sueldo);
 int employee_getSueldo(Employee* this,int* sueldo);
 
-int employee_CompareByName(Employee* e1, Employee* e2);
-int employee_CompareById(Employee* e1, Employee* e2);
+int employee_CompareByName(void* e1, void* e2);
+int employee_CompareById(void* e1, void* e2);
 
 void message_user(char* message);
 void returnValidation(int returnStatus);

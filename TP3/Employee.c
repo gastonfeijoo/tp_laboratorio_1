@@ -150,8 +150,11 @@ int employee_getSueldo(Employee* this,int* sueldo)
     return returnStatus;
 }
 
-int employee_CompareByName(Employee* e1, Employee* e2)
+int employee_CompareByName(void* e1, void* e2)
 {
+    e1=(Employee*)e1;
+    e2=(Employee*)e2;
+
     int returnCompare;
     returnCompare=0;
     int returnGet;
@@ -181,8 +184,10 @@ int employee_CompareByName(Employee* e1, Employee* e2)
 
     return returnCompare;
 }
-int employee_CompareById(Employee* e1, Employee* e2)
+int employee_CompareById(void* e1, void* e2)
 {
+    e1=(Employee*)e1;
+    e2=(Employee*)e2;
     int returnCompare;
     int returnGet;
     int id1;

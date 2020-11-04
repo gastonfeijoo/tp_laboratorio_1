@@ -138,7 +138,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
     int horasTrabajadas;
     int sueldo;
     int returnSet;
-    int returnLlPush;
+    int returnLlSet;
 
     int i;
     int isFoundID;
@@ -182,9 +182,10 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
                     returnValidation(returnSet);
                     if (returnSet)
                     {
-                        returnLlPush=ll_push(pArrayListEmployee,i,pAux);
+                        returnLlSet=ll_set(pArrayListEmployee,i,pAux);
 
-                        if(returnLlPush==0)
+
+                        if(returnLlSet==0)
                         {
                             returnStatus=1;
                         }
