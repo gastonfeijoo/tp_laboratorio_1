@@ -5,6 +5,13 @@
 #include "Employee.h"
 #include "parser.h"
 
+/** \brief reads a TXT file with CSV format and add values to structure. Requests the user to indicate if CSV has header row
+ *
+ * \param pFile FILE* pointer to file
+ * \param pArrayListEmployee LinkedList*  linked list to load
+ * \return int return 0 if fails to read and save and 1 if succeeds
+ *
+ */
 int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 {
     //probar
@@ -51,6 +58,13 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
 
 }
 
+/** \brief reads a Binary file and add values to structure
+ *
+ * \param pFile FILE* FILE* pointer to file
+ * \param pArrayListEmployee LinkedList* linked list to load
+ * \return int return 0 if fails to read and save and 1 if succeeds
+ *
+ */
 int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 {
 
@@ -85,6 +99,11 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
 
     return returnStatus;
 }
+/** \brief Request the user to indicate if file has header row
+ *
+ * \return returns 0 if file doesn't have a header row. 1 if it does.
+ *
+ */
 
 int parser_HasHeader()
 {

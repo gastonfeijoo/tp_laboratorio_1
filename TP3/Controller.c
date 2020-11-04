@@ -8,18 +8,26 @@
 #include "Employee.h"
 #include "parser.h"
 
+/** \brief Calls the parser for txt csv files and loads data into Linked List
+ *
+ * \param path char* string with path and name of file to load
+ * \param pArrayListEmployee LinkedList* linked list to load
+ * \return int returns 1 if successful or 0 if failed to load
+ *
+ */
 int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 {
     int returnStatus;
     int returnClear;
     returnStatus=0;
+    returnClear=0;
 
     if (!ll_isEmpty(pArrayListEmployee))
     {
         returnClear=ll_clear(pArrayListEmployee);
-        returnValidation(!returnClear);
+
     }
-    if (returnClear)
+    if (returnClear==0)
     {
 
         FILE* pFile;
@@ -39,18 +47,26 @@ int controller_loadFromText(char* path, LinkedList* pArrayListEmployee)
 }
 
 
+/** \brief Calls the parser for binary files and loads data into Linked List
+ *
+ * \param path char* string with path and name of file to load
+ * \param pArrayListEmployee LinkedList* linked list to load
+ * \return int returns 1 if successful or 0 if failed to load
+ *
+ */
 int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 {
     int returnStatus;
     int returnClear;
     returnStatus=0;
+    returnClear=0;
 
     if (!ll_isEmpty(pArrayListEmployee))
     {
         returnClear=ll_clear(pArrayListEmployee);
-        returnValidation(!returnClear);
+
     }
-    if (returnClear)
+    if (returnClear==0)
     {
 
         FILE* pFile;
@@ -69,6 +85,12 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 }
 
 
+/** \brief Adds a employee to linked list and request inputs from user
+ *
+ * \param pArrayListEmployee LinkedList* linked list to add employee
+ * \return int returns 1 if successful or 0 if failed to add employee
+ *
+ */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
     Employee* pAux = employee_new();
@@ -127,6 +149,12 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
 }
 
 
+/** \brief Request ID from user and if ID is found request new data to modify an employee
+ *
+ * \param pArrayListEmployee LinkedList* linked list to seek and modify employee
+ * \return int returns 1 if successful or 0 if failed to add employee
+ *
+ */
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
     Employee* pAux=employee_new();
@@ -199,7 +227,12 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
     return returnStatus;
 }
 
-
+/** \brief Request ID from user and if ID is found deletes the employee from the Linked List
+ *
+ * \param pArrayListEmployee LinkedList* linked list to seek and delete employee
+ * \return int returns 0 if successful or -1 if failed to add employee
+ *
+ */
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
     int returnStatus;
@@ -234,6 +267,12 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
 }
 
 
+/** \brief List to STDIN the contents of linked list
+ *
+ * \param pArrayListEmployee LinkedList* Linked list to print
+ * \return int returns 1 if successful or 0 if failed to print
+ *
+ */
 int controller_ListEmployee(LinkedList* pArrayListEmployee)
 {
     int returnGet;
@@ -272,7 +311,12 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
     return returnGet;
 }
 
-
+/** \brief Request from user field to sort and type of sort and sort the linked list
+ *
+ * \param pArrayListEmployee LinkedList* linked list to sort
+ * \return int returns 0 if successful or -1 if failed to sort linked list
+ *
+ */
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
     int returnSort;
@@ -301,7 +345,13 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
     return returnSort;
 }
 
-
+/** \brief Save Linked List to txt csv file
+ *
+ * \param path char* string with path and name of file to save
+ * \param pArrayListEmployee LinkedList* linked list to save
+ * \return int returns 1 if successful or 0 if failed to load
+ *
+ */
 int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 {
 
@@ -354,7 +404,13 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
     return returnStatus;
 }
 
-
+/** \brief Save Linked List to binary file
+ *
+ * \param path char* string with path and name of file to save
+ * \param pArrayListEmployee LinkedList* linked list to save
+ * \return int returns 1 if successful or 0 if failed to load
+ *
+ */
 int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
 {
     int returnStatus;
