@@ -102,11 +102,11 @@ void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTx
         returnEdit=controller_editEmployee(pArrayListEmployee);
         if (returnEdit)
         {
-            printf("Carga Exitosa\n");
+            printf("Modificacion Exitosa\n");
         }
         else
         {
-            printf("Carga Fallida\n");
+            printf("Modificacion Fallida\n");
         }
 
         break;

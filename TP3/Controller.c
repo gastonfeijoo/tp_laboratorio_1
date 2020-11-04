@@ -143,7 +143,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
     int i;
     int isFoundID;
 
-    returnStatus=-1;
+    returnStatus=0;
     isFoundID=0;
 
     idModify=getValidInt("Ingrese el ID a modificar\n","ID invalido",0,INT_MAX);
