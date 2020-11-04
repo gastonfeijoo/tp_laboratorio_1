@@ -44,32 +44,71 @@ int userMenuOption(int optionsNumber, int optionNumberExit, char optionsText[],c
 /** \brief Takes the user option of a main menu and executes the code for that option
  *
  * \param userOption int user option of a menu
- * \param entity1[] eMascotas array used by cases
- * \param entity2[] eRazas array used by cases
- * \param size1 int size of eMascotas Array
- * \param size2 int size of eRazas Array
+ * \param LinkedList* pArrayListEmployee LinkedList used by cases
+ * \param char* pathTxt Path to Data.CSV
+ * \param char* pathBin Path to Data.BIN
  * \return void
  *
  */
 void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTxt, char* pathBin)
 {
     //FALTAN LOS RETORNOS!!!!!!!!!!!!***********
-    int returnSort;
+    int returnLoadTxt;
+    int returnLoadBin;
+    int returnAdd;
+    int returnEdit;
     int returnRemove;
+    int returnList;
+    int returnSort;
+    int returnSaveTxt;
+    int returnSaveBin;
 
     switch(userOption)
     {
     case 1: //Carga csv txt
-        controller_loadFromText(pathTxt,pArrayListEmployee);
+        returnLoadTxt=controller_loadFromText(pathTxt,pArrayListEmployee);
+        if (returnLoadTxt)
+        {
+            printf("Carga Exitosa\n");
+        }
+        else
+        {
+            printf("Carga Fallida\n");
+        }
         break;
     case 2: //Carga csv bin
-        controller_loadFromBinary(pathBin,pArrayListEmployee);
+        returnLoadBin=controller_loadFromBinary(pathBin,pArrayListEmployee);
+        if (returnLoadBin)
+        {
+            printf("Carga Exitosa\n");
+        }
+        else
+        {
+            printf("Carga Fallida\n");
+        }
         break;
     case 3: //alta
-        controller_addEmployee(pArrayListEmployee);
+        returnAdd=controller_addEmployee(pArrayListEmployee);
+        if (returnAdd)
+        {
+            printf("Carga Exitosa\n");
+        }
+        else
+        {
+            printf("Carga Fallida\n");
+        }
         break;
     case 4: //modif
-        controller_editEmployee(pArrayListEmployee);
+        returnEdit=controller_editEmployee(pArrayListEmployee);
+        if (returnEdit)
+        {
+            printf("Carga Exitosa\n");
+        }
+        else
+        {
+            printf("Carga Fallida\n");
+        }
+
         break;
     case 5: //baja
         returnRemove=controller_removeEmployee(pArrayListEmployee);
@@ -83,7 +122,11 @@ void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTx
         }
         break;
     case 6: //listar
-        controller_ListEmployee(pArrayListEmployee);
+        returnList=controller_ListEmployee(pArrayListEmployee);
+        if (!returnList)
+        {
+            printf("Error al listar\n");
+        }
         break;
     case 7: //ordenar
         returnSort=controller_sortEmployee(pArrayListEmployee);
@@ -93,10 +136,26 @@ void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTx
         }
         break;
     case 8: //guardar txt
-        controller_saveAsText(pathTxt,pArrayListEmployee);
+        returnSaveTxt=controller_saveAsText(pathTxt,pArrayListEmployee);
+        if (returnSaveTxt)
+        {
+            printf("Guardado Exitoso\n");
+        }
+        else
+        {
+            printf("Guardado Fallido\n");
+        }
         break;
     case 9: //guardar bin
-        controller_saveAsBinary(pathBin,pArrayListEmployee);
+        returnSaveBin=controller_saveAsBinary(pathBin,pArrayListEmployee);
+        if (returnSaveBin)
+        {
+            printf("Guardado Exitoso\n");
+        }
+        else
+        {
+            printf("Guardado Fallido\n");
+        }
         break;
     }
 }

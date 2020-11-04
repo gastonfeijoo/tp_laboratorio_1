@@ -4,36 +4,18 @@
 #include "LinkedList.h"
 #include "UI.h"
 
-/****************************************************
-    Menu:
-     1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).
-     2. Cargar los datos de los empleados desde el archivo data.csv (modo binario).
-     3. Alta de empleado
-     4. Modificar datos de empleado
-     5. Baja de empleado
-     6. Listar empleados
-     7. Ordenar empleados
-     8. Guardar los datos de los empleados en el archivo data.csv (modo texto).
-     9. Guardar los datos de los empleados en el archivo data.csv (modo binario).
-    10. Salir
-*****************************************************/
-
-//break en todas las retornos de las validaciones
-
 int main()
 {
-
-  //Crear lista
     LinkedList* pEmployees;
     pEmployees = ll_newLinkedList();
 
-
+    int userOption;
     char pathTxt[256];
-    strcpy(pathTxt,"data.csv");
     char pathBin[256];
+
+    strcpy(pathTxt,"data.csv");
     strcpy(pathBin,"data.bin");
 
-    int userOption;
 
     do
     {
