@@ -62,7 +62,6 @@ int employee_getId(Employee* this,int* id)
 {
     int returnStatus;
     returnStatus=0;
-    //printf("employee_setId - %d _",this->id);//debug
     if(this!=NULL && id!=NULL)
     {
         *id=this->id;
@@ -158,12 +157,11 @@ int employee_CompareByName(Employee* e1, Employee* e2)
     int returnGet;
     char nombre1[128];
     char nombre2[128];
-
     returnGet=employee_getNombre(e1,nombre1);
     returnValidation(returnGet);
     if (returnGet)
     {
-        returnGet=employee_getNombre(e1,nombre1);
+        returnGet=employee_getNombre(e2,nombre2);
         returnValidation(returnGet);
         if (returnGet)
         {
@@ -180,6 +178,7 @@ int employee_CompareByName(Employee* e1, Employee* e2)
             }
         }
     }
+
     return returnCompare;
 }
 int employee_CompareById(Employee* e1, Employee* e2)
@@ -226,4 +225,44 @@ void returnValidation(int returnStatus)
     {
         message_user("Error!");
     }
+}
+
+int GetIncrementalID (LinkedList* pArrayListEmployee ,int increment)
+{
+
+    LinkedList* pEmployeesID;
+    Employee* pAux = employee_new();
+    int returnSort;
+    int returnID;
+    int returnGet;
+    int returnIsEmpty;
+    returnID=1;
+
+    pEmployeesID = ll_newLinkedList();
+    pEmployeesID=ll_clone(pArrayListEmployee);
+
+
+    returnIsEmpty=ll_isEmpty(pEmployeesID);
+    //printf("Retorno IsEmpty %d\n",returnIsEmpty);
+    if (returnIsEmpty==0)
+    {
+
+        returnSort=ll_sort(pEmployeesID,employee_CompareById,0);
+        //printf("Retorno Sort %d\n",returnSort);
+        if (returnSort==0)
+        {
+            pAux=ll_get(pEmployeesID,0);
+            returnGet=employee_getId(pAux,&returnID);
+            returnValidation(returnGet);
+            if (returnGet)
+            {
+                returnID=returnID+increment;
+            }
+        }
+        else
+        {
+            returnID++;
+        }
+    }
+    return returnID;
 }

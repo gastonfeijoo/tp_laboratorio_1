@@ -1,4 +1,5 @@
 #ifndef employee_H_INCLUDED
+#include "LinkedList.h"
 #define employee_H_INCLUDED
 
 typedef struct
@@ -30,5 +31,7 @@ int employee_CompareById(Employee* e1, Employee* e2);
 
 void message_user(char* message);
 void returnValidation(int returnStatus);
+
+int GetIncrementalID (LinkedList* pArrayListEmployee ,int increment);
 
 #endif // employee_H_INCLUDED

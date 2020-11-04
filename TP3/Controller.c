@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 #include "UI.h"
+#include "utn.h"
 #include "LinkedList.h"
 #include "Employee.h"
 #include "parser.h"
@@ -69,20 +71,165 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
+    Employee* pAux = employee_new();
 
-    return 1;
+    int id;
+    char nombre[128];
+    int horasTrabajadas;
+    int sueldo;
+    int returnStatus;
+    int returnSet;
+    int returnLlAdd;
+    returnStatus=0;
+
+    id=GetIncrementalID(pArrayListEmployee,1);
+    if (id==-1)
+    {
+        printf("No se pudo obtener un ID!\n");
+    }
+    else
+    {
+        getValidString("Ingrese el nombre:\n","Nombre Invalido",nombre);
+        horasTrabajadas=getValidInt("Ingrese las horas trabajadas\n","Horas invalidas",0,372);//regla de negocio max 12 hs por dia por 31 dias
+        sueldo=getValidInt("Ingrese el sueldo\n","Sueldo Invalido",0,INT_MAX);
+
+        returnSet=employee_setId(pAux,id);
+        returnValidation(returnSet);
+        if (returnSet)
+        {
+            returnSet=employee_setNombre(pAux,nombre);
+            returnValidation(returnSet);
+            if (returnSet)
+            {
+                returnSet=employee_setHorasTrabajadas(pAux,horasTrabajadas);
+                returnValidation(returnSet);
+                if (returnSet)
+                {
+                    returnSet=employee_setSueldo(pAux,sueldo);
+                    returnValidation(returnSet);
+                    if (returnSet)
+                    {
+                        returnLlAdd=ll_add(pArrayListEmployee,pAux);
+                        if(returnLlAdd==0)
+                        {
+                            returnStatus=1;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+
+    return returnStatus;
 }
 
 
 int controller_editEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    Employee* pAux=employee_new();
+    int idModify;
+    int id;
+    int returnStatus;
+
+    char nombre[128];
+    int horasTrabajadas;
+    int sueldo;
+    int returnSet;
+    int returnLlPush;
+
+    int i;
+    int isFoundID;
+
+    returnStatus=-1;
+    isFoundID=0;
+
+    idModify=getValidInt("Ingrese el ID a modificar\n","ID invalido",0,INT_MAX);
+
+    for (i=0;i<ll_len(pArrayListEmployee);i++)
+    {
+        pAux=(Employee*)ll_get(pArrayListEmployee,i);
+        employee_getId(pAux,&id);
+        if (id==idModify)
+        {
+            isFoundID=1;
+            break;
+        }
+
+    }
+    if (isFoundID)
+    {
+
+        getValidString("Ingrese el nombre:\n","Nombre Invalido",nombre);
+        horasTrabajadas=getValidInt("Ingrese las horas trabajadas\n","Horas invalidas",0,372);//regla de negocio max 12 hs por dia por 31 dias
+        sueldo=getValidInt("Ingrese el sueldo\n","Sueldo Invalido",0,INT_MAX);
+
+        returnSet=employee_setId(pAux,idModify);
+        returnValidation(returnSet);
+        if (returnSet)
+        {
+            returnSet=employee_setNombre(pAux,nombre);
+            returnValidation(returnSet);
+            if (returnSet)
+            {
+                returnSet=employee_setHorasTrabajadas(pAux,horasTrabajadas);
+                returnValidation(returnSet);
+                if (returnSet)
+                {
+                    returnSet=employee_setSueldo(pAux,sueldo);
+                    returnValidation(returnSet);
+                    if (returnSet)
+                    {
+                        returnLlPush=ll_push(pArrayListEmployee,i,pAux);
+
+                        if(returnLlPush==0)
+                        {
+                            returnStatus=1;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    return returnStatus;
 }
 
 
 int controller_removeEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int returnStatus;
+    int idRemove;
+    int id;
+    int isFoundID;
+    int i;
+    returnStatus=-1;
+    isFoundID=0;
+    Employee* pAux=employee_new();
+
+    idRemove=getValidInt("Ingrese el ID a eliminar\n","ID invalido",0,INT_MAX);
+
+    for (i=0;i<ll_len(pArrayListEmployee);i++)
+    {
+        pAux=(Employee*)ll_get(pArrayListEmployee,i);
+        employee_getId(pAux,&id);
+        if (id==idRemove)
+        {
+            isFoundID=1;
+            break;
+        }
+
+    }
+    if (isFoundID)
+    {
+
+    returnStatus=ll_remove(pArrayListEmployee,i);
+    }
+
+    return returnStatus;
 }
 
 
@@ -103,15 +250,22 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
         // PONER IF EN RETORNOS********************
         returnGet=employee_getId(elementPEmployees,&id);
         returnValidation(returnGet);
-        returnGet=employee_getNombre(elementPEmployees,nombre);
-        returnValidation(returnGet);
-        returnGet=employee_getHorasTrabajadas(elementPEmployees,&horasTrabajadas);
-        returnValidation(returnGet);
-        returnGet=employee_getSueldo(elementPEmployees,&sueldo);
-        returnValidation(returnGet);
         if (returnGet)
         {
-            printf("%-4d\t%-15s\t%-4d\t%-4d\t\n",id,nombre,horasTrabajadas,sueldo);
+            returnGet=employee_getNombre(elementPEmployees,nombre);
+            returnValidation(returnGet);
+                if (returnGet)
+                {
+                    returnGet=employee_getHorasTrabajadas(elementPEmployees,&horasTrabajadas);
+                    returnValidation(returnGet);
+                    if(returnGet)
+                    {
+                        returnGet=employee_getSueldo(elementPEmployees,&sueldo);
+                        returnValidation(returnGet);
+                        printf("%-4d\t%-15s\t%-4d\t%-4d\t\n",id,nombre,horasTrabajadas,sueldo);
+
+                    }
+                }
         }
     }
     return returnGet;

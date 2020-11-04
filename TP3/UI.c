@@ -53,6 +53,9 @@ int userMenuOption(int optionsNumber, int optionNumberExit, char optionsText[],c
  */
 void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTxt, char* pathBin)
 {
+    //FALTAN LOS RETORNOS!!!!!!!!!!!!***********
+    int returnSort;
+    int returnRemove;
 
     switch(userOption)
     {
@@ -63,19 +66,27 @@ void MenuMainSwitch(int userOption, LinkedList* pArrayListEmployee, char* pathTx
         controller_loadFromBinary(pathBin,pArrayListEmployee);
         break;
     case 3: //alta
-
+        controller_addEmployee(pArrayListEmployee);
         break;
     case 4: //modif
-
+        controller_editEmployee(pArrayListEmployee);
         break;
     case 5: //baja
-
+        returnRemove=controller_removeEmployee(pArrayListEmployee);
+        if (returnRemove==-1)
+        {
+            printf("ID no encontrado\n");
+        }
+        else
+        {
+            printf("ID eliminado con exito\n");
+        }
         break;
     case 6: //listar
         controller_ListEmployee(pArrayListEmployee);
         break;
     case 7: //ordenar
-        controller_sortEmployee(pArrayListEmployee);
+        returnSort=controller_sortEmployee(pArrayListEmployee);
         break;
     case 8: //guardar txt
         controller_saveAsText(pathTxt,pArrayListEmployee);
