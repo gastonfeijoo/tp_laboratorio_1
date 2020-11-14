@@ -1,0 +1,8885 @@
+cscope 15 /d/UTN/OneDrive/Programacion_I/TPs/LinkedList/src               0000063018
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\inc\LinkedList.h
+
+19 #i‚de‡
+__LINKEDLIST
+
+
+20 
+	#__LINKEDLIST
+
+
+	)
+
+21 
+	sNode
+
+
+23 * 
+	mpEÀmít
+;
+
+24 
+Node
+* 
+	mpNextNode
+;
+
+25 }
+	gNode
+;
+
+27 
+	sLökedLi°
+
+
+29 
+Node
+* 
+	mpFú°Node
+;
+
+30 
+	msize
+;
+
+31 }
+	gLökedLi°
+;
+
+37 
+LökedLi°
+* 
+Œ_√wLökedLi°
+();
+
+39 
+Œ_Àn
+(
+LökedLi°
+* 
+this
+);
+
+40 
+Node
+* 
+ã°_gëNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+);
+
+41 
+ã°_addNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+,* 
+pEÀmít
+);
+
+42 
+Œ_add
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+);
+
+43 * 
+Œ_gë
+(
+LökedLi°
+* 
+this
+, 
+ödex
+);
+
+44 
+Œ_£t
+(
+LökedLi°
+* 
+this
+, 
+ödex
+,* 
+pEÀmít
+);
+
+45 
+Œ_ªmove
+(
+LökedLi°
+* 
+this
+,
+ödex
+);
+
+46 
+Œ_˛ór
+(
+LökedLi°
+* 
+this
+);
+
+47 
+Œ_dñëeLökedLi°
+(
+LökedLi°
+* 
+this
+);
+
+48 
+Œ_ödexOf
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+);
+
+49 
+Œ_isEm±y
+(
+LökedLi°
+* 
+this
+);
+
+50 
+Œ_push
+(
+LökedLi°
+* 
+this
+, 
+ödex
+, * 
+pEÀmít
+);
+
+51 * 
+Œ_p›
+(
+LökedLi°
+* 
+this
+,
+ödex
+);
+
+52 
+Œ_c⁄èös
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+);
+
+53 
+Œ_c⁄èösAŒ
+(
+LökedLi°
+* 
+this
+,LökedLi°* 
+this2
+);
+
+54 
+LökedLi°
+* 
+Œ_subLi°
+(LökedLi°* 
+this
+,
+‰om
+,
+to
+);
+
+55 
+LökedLi°
+* 
+Œ_˛⁄e
+(LökedLi°* 
+this
+);
+
+56 
+Œ_s‹t
+(
+LökedLi°
+* 
+this
+, (*
+pFunc
+)(* ,*), 
+‹dî
+);
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\src\LinkedList.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~"../öc/LökedLi°.h
+"
+
+6 
+Node
+* 
+gëNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+);
+
+7 
+addNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+,* 
+pEÀmít
+);
+
+15 
+LökedLi°
+* 
+	$Œ_√wLökedLi°
+()
+
+17 
+LökedLi°
+* 
+this
+;
+
+19 
+this
+ = (
+LökedLi°
+*Ë
+	`mÆloc
+((LinkedList));
+
+20 if(
+this
+!=
+NULL
+)
+
+22 
+this
+->
+size
+ = 0;
+
+23 
+this
+->
+pFú°Node
+ = 
+NULL
+;
+
+26  
+this
+;
+
+27 
+	}
+}
+
+35 
+	$Œ_Àn
+(
+LökedLi°
+* 
+this
+)
+
+37 
+ªtu∫Aux
+ = -1;
+
+38 if(
+this
+!=
+NULL
+)
+
+40 
+ªtu∫Aux
+ = 
+this
+->
+size
+;
+
+44  
+ªtu∫Aux
+;
+
+45 
+	}
+}
+
+56 
+Node
+* 
+	$gëNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+)
+
+67 
+Node
+* 
+pNode
+ = 
+NULL
+;
+
+69 
+ÀnLl
+;
+
+70 
+i
+;
+
+71 
+i
+=0;
+
+73 
+ÀnLl
+=
+	`Œ_Àn
+(
+this
+);
+
+75 i‡(
+nodeIndex
+<
+ÀnLl
+)
+
+77 
+pNode
+=
+this
+->
+pFú°Node
+;
+
+78 
+pNode
+!=
+NULL
+)
+
+80 i‡(
+i
+==
+nodeIndex
+)
+
+84 
+i
+++;
+
+85 
+pNode
+ıNode->
+pNextNode
+;
+
+90  
+pNode
+;
+
+91 
+	}
+}
+
+101 
+Node
+* 
+	$ã°_gëNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+)
+
+103  
+	`gëNode
+(
+this
+, 
+nodeIndex
+);
+
+104 
+	}
+}
+
+116 
+	$addNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+,* 
+pEÀmít
+)
+
+126 
+ªtu∫Aux
+ = -1;
+
+127 
+Node
+* 
+¥ev
+;
+
+128 
+Node
+* 
+√xt
+;
+
+129 
+Node
+* 
+√wNode
+;
+
+131 if(
+this
+!=
+NULL
+ && 
+nodeIndex
+>-1)
+
+134 
+√wNode
+=
+	`mÆloc
+((
+Node
+));
+
+135 
+√wNode
+->
+pEÀmít
+=pElement;
+
+137 
+¥ev
+=
+	`gëNode
+(
+this
+,
+nodeIndex
+);
+
+138 
+√xt
+=
+	`gëNode
+(
+this
+,
+nodeIndex
++1);
+
+140 i‡(
+√xt
+==
+NULL
+ && 
+¥ev
+==NULL)
+
+143 
+this
+->
+pFú°Node
+=
+√wNode
+;
+
+144 
+√wNode
+->
+pNextNode
+=
+NULL
+;
+
+149 
+¥ev
+->
+pNextNode
+=
+√wNode
+;
+
+150 if((
+√xt
+!=
+NULL
+ && 
+¥ev
+==NULL)||(next==NULL &&Örev!=NULL))
+
+153 
+√wNode
+->
+pNextNode
+=
+NULL
+;
+
+158 
+√wNode
+->
+pNextNode
+=
+√xt
+;
+
+161 
+this
+->
+size
+++;
+
+162 
+ªtu∫Aux
+=0;
+
+166  
+ªtu∫Aux
+;
+
+167 
+	}
+}
+
+179 
+	$ã°_addNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+,* 
+pEÀmít
+)
+
+181  
+	`addNode
+(
+this
+,
+nodeIndex
+,
+pEÀmít
+);
+
+182 
+	}
+}
+
+192 
+	$Œ_add
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+)
+
+194 
+ªtu∫Aux
+ = -1;
+
+195 
+ödi˚
+ = 0;
+
+196 
+Node
+* 
+a˘uÆ
+;
+
+200  
+ªtu∫Aux
+;
+
+201 
+	}
+}
+
+211 * 
+	$Œ_gë
+(
+LökedLi°
+* 
+this
+, 
+ödex
+)
+
+213 * 
+ªtu∫Aux
+ = 
+NULL
+;
+
+216  
+ªtu∫Aux
+;
+
+217 
+	}
+}
+
+229 
+	$Œ_£t
+(
+LökedLi°
+* 
+this
+, 
+ödex
+,* 
+pEÀmít
+)
+
+231 
+ªtu∫Aux
+ = -1;
+
+232 
+Node
+* 
+a˘uÆ
+;
+
+233 
+ˇ¡idad
+;
+
+236  
+ªtu∫Aux
+;
+
+237 
+	}
+}
+
+248 
+	$Œ_ªmove
+(
+LökedLi°
+* 
+this
+,
+ödex
+)
+
+250 
+ªtu∫Aux
+ = -1;
+
+251 
+Node
+* 
+a˘uÆ
+;
+
+252 
+Node
+* 
+√xt
+;
+
+253 
+ödi˚
+ = 0;
+
+256  
+ªtu∫Aux
+;
+
+257 
+	}
+}
+
+267 
+	$Œ_˛ór
+(
+LökedLi°
+* 
+this
+)
+
+269 
+ªtu∫Aux
+ = -1;
+
+270 
+Node
+* 
+nodo
+;
+
+271 
+i
+;
+
+274  
+ªtu∫Aux
+;
+
+275 
+	}
+}
+
+285 
+	$Œ_dñëeLökedLi°
+(
+LökedLi°
+* 
+this
+)
+
+287 
+ªtu∫Aux
+ = -1;
+
+290  
+ªtu∫Aux
+;
+
+291 
+	}
+}
+
+301 
+	$Œ_ödexOf
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+)
+
+303 
+ªtu∫Aux
+ = -1;
+
+304 
+i
+;
+
+305 
+Node
+* 
+nodo
+;
+
+309  
+ªtu∫Aux
+;
+
+310 
+	}
+}
+
+320 
+	$Œ_isEm±y
+(
+LökedLi°
+* 
+this
+)
+
+322 
+ªtu∫Aux
+ = -1;
+
+324 if(
+this
+ !
+NULL
+)
+
+326 if–
+	`Œ_Àn
+(
+this
+))
+
+328 
+ªtu∫Aux
+ = 0;
+
+332 
+ªtu∫Aux
+ = 1;
+
+335  
+ªtu∫Aux
+;
+
+336 
+	}
+}
+
+347 
+	$Œ_push
+(
+LökedLi°
+* 
+this
+, 
+ödex
+, * 
+pEÀmít
+)
+
+349 
+ªtu∫Aux
+ = -1;
+
+353  
+ªtu∫Aux
+;
+
+354 
+	}
+}
+
+365 * 
+	$Œ_p›
+(
+LökedLi°
+* 
+this
+,
+ödex
+)
+
+367 * 
+ªtu∫Aux
+ = 
+NULL
+;
+
+368 
+Node
+* 
+nodo
+;
+
+372  
+ªtu∫Aux
+;
+
+373 
+	}
+}
+
+384 
+	$Œ_c⁄èös
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+)
+
+386 
+ªtu∫Aux
+ = -1;
+
+389  
+ªtu∫Aux
+;
+
+390 
+	}
+}
+
+401 
+	$Œ_c⁄èösAŒ
+(
+LökedLi°
+* 
+this
+,LökedLi°* 
+this2
+)
+
+403 
+ªtu∫Aux
+ = -1;
+
+404 
+i
+;
+
+405 
+Node
+* 
+nodo
+;
+
+408  
+ªtu∫Aux
+;
+
+409 
+	}
+}
+
+421 
+LökedLi°
+* 
+	$Œ_subLi°
+(
+LökedLi°
+* 
+this
+,
+‰om
+,
+to
+)
+
+423 
+LökedLi°
+* 
+˛⁄eAºay
+ = 
+NULL
+;
+
+424 
+i
+;
+
+425 * 
+pEÀmít
+;
+
+428  
+˛⁄eAºay
+;
+
+429 
+	}
+}
+
+439 
+LökedLi°
+* 
+	$Œ_˛⁄e
+(
+LökedLi°
+* 
+this
+)
+
+441 
+LökedLi°
+* 
+˛⁄eAºay
+ = 
+NULL
+;
+
+444  
+˛⁄eAºay
+;
+
+445 
+	}
+}
+
+455 
+Œ_s‹t
+(
+LökedLi°
+* 
+this
+, (*
+pFunc
+)(*,*), 
+‹dî
+)
+
+457 
+ªtu∫Aux
+ =-1;
+
+458 * 
+pAux
+;
+
+462  
+ªtu∫Aux
+;
+
+463 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\src\main.c
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+23 
+	~"../ã°ög/öc/maö_ã°.h
+"
+
+24 
+	~"../öc/LökedLi°.h
+"
+
+27 
+	$maö
+()
+
+32 
+	`°¨tTe°ög
+(4);
+
+50 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\Employee.h
+
+18 #i‚de‡
+__EMPLOYEE
+
+
+19 
+	#__EMPLOYEE
+
+
+	)
+
+22 
+	mid
+;
+
+23 
+	m«me
+[51];
+
+24 
+	mœ°Name
+[51];
+
+25 
+	mßœry
+;
+
+26 
+	m£˘‹
+;
+
+27 
+	misEm±y
+;
+
+29 }
+	gEm∂oyì
+;
+
+32 
+com∑ªEm∂oyì
+(* 
+pEm∂oyìA
+,* 
+pEm∂oyìB
+);
+
+33 
+¥ötEm∂oyì
+(
+Em∂oyì
+* 
+p
+);
+
+34 
+Em∂oyì
+* 
+√wEm∂oyì
+(
+id
+, 
+«me
+[],
+œ°Name
+[],
+ßœry
+,
+£˘‹
+);
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\addNodeTest.h
+
+19 
+addNodeTe°Sëup
+();
+
+20 
+addNodeTe°Ca£01
+();
+
+21 
+addNodeTe°Ca£02
+();
+
+22 
+addNodeTe°Ca£03
+();
+
+23 
+addNodeTe°Ca£04
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\addTest.h
+
+19 
+addTe°Sëup
+();
+
+20 
+addTe°Ca£01
+();
+
+21 
+addTe°Ca£02
+();
+
+22 
+addTe°Ca£03
+();
+
+23 
+addTe°Ca£04
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\clearTest.h
+
+20 
+˛órTe°Sëup
+();
+
+21 
+˛órTe°Ca£01
+();
+
+22 
+˛órTe°Ca£02
+();
+
+23 
+˛órTe°Ca£03
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\cloneTest.h
+
+18 
+˛⁄eTe°Sëup
+();
+
+19 
+˛⁄eTe°Ca£01
+();
+
+20 
+˛⁄eTe°Ca£02
+();
+
+21 
+˛⁄eTe°Ca£03
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\containsAllTest.h
+
+18 
+c⁄èösAŒTe°Sëup
+();
+
+19 
+c⁄èösAŒTe°Ca£01
+();
+
+20 
+c⁄èösAŒTe°Ca£02
+();
+
+21 
+c⁄èösAŒTe°Ca£03
+();
+
+22 
+c⁄èösAŒTe°Ca£04
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\containsTest.h
+
+18 
+c⁄èösTe°Sëup
+();
+
+19 
+c⁄èösTe°Ca£01
+();
+
+20 
+c⁄èösTe°Ca£02
+();
+
+21 
+c⁄èösTe°Ca£03
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\deleteLinkedListTest.h
+
+19 
+dñëeLökedLi°Te°Sëup
+();
+
+20 
+dñëeLökedLi°Te°Ca£01
+();
+
+21 
+dñëeLökedLi°Te°Ca£02
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\getNodeTest.h
+
+18 
+gëNodeTe°Sëup
+();
+
+19 
+gëNodeTe°Ca£01
+();
+
+20 
+gëNodeTe°Ca£02
+();
+
+21 
+gëNodeTe°Ca£03
+();
+
+22 
+gëNodeTe°Ca£04
+();
+
+23 
+gëNodeTe°Ca£05
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\getTest.h
+
+18 
+gëTe°Sëup
+();
+
+19 
+gëTe°Ca£01
+();
+
+20 
+gëTe°Ca£02
+();
+
+21 
+gëTe°Ca£03
+();
+
+22 
+gëTe°Ca£04
+();
+
+23 
+gëTe°Ca£05
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\indexOfTest.h
+
+19 
+ödexOfTe°Sëup
+();
+
+20 
+ödexOfTe°Ca£01
+();
+
+21 
+ödexOfTe°Ca£02
+();
+
+22 
+ödexOfTe°Ca£03
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\isEmptyTest.h
+
+19 
+isEm±yTe°Sëup
+();
+
+20 
+isEm±yTe°Ca£01
+();
+
+21 
+isEm±yTe°Ca£02
+();
+
+22 
+isEm±yTe°Ca£03
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\lenTest.h
+
+20 
+ÀnTe°Sëup
+();
+
+21 
+ÀnTe°Ca£01
+();
+
+22 
+ÀnTe°Ca£02
+();
+
+23 
+ÀnTe°Ca£03
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\main_test.h
+
+19 
+°¨tTe°ög
+(
+ã°Group
+);
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\newTest.h
+
+19 
+√wTe°Sëup
+();
+
+20 
+√wTe°Ca£01
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\popTest.h
+
+19 
+p›Te°Sëup
+();
+
+20 
+p›Te°Ca£01
+();
+
+21 
+p›Te°Ca£02
+();
+
+22 
+p›Te°Ca£03
+();
+
+23 
+p›Te°Ca£04
+();
+
+24 
+p›Te°Ca£05
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\pushTest.h
+
+19 
+pushTe°Sëup
+();
+
+20 
+pushTe°Ca£01
+();
+
+21 
+pushTe°Ca£02
+();
+
+22 
+pushTe°Ca£03
+();
+
+23 
+pushTe°Ca£04
+();
+
+24 
+pushTe°Ca£05
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\removeTest.h
+
+19 
+ªmoveTe°Sëup
+();
+
+20 
+ªmoveTe°Ca£01
+();
+
+21 
+ªmoveTe°Ca£02
+();
+
+22 
+ªmoveTe°Ca£03
+();
+
+23 
+ªmoveTe°Ca£04
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\setTest.h
+
+19 
+£tTe°Sëup
+();
+
+20 
+£tTe°Ca£01
+();
+
+21 
+£tTe°Ca£02
+();
+
+22 
+£tTe°Ca£03
+();
+
+23 
+£tTe°Ca£04
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\sortTest.h
+
+21 
+s‹tTe°Sëup
+();
+
+22 
+s‹tTe°Ca£01
+();
+
+23 
+s‹tTe°Ca£02
+();
+
+24 
+s‹tTe°Ca£03
+();
+
+25 
+s‹tTe°Ca£04
+();
+
+26 
+s‹tTe°Ca£05
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\subListTest.h
+
+19 
+subLi°Te°Sëup
+();
+
+20 
+subLi°Te°Ca£01
+();
+
+21 
+subLi°Te°Ca£02
+();
+
+22 
+subLi°Te°Ca£03
+();
+
+23 
+subLi°Te°Ca£04
+();
+
+24 
+subLi°Te°Ca£05
+();
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\Employee.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~"../öc/Em∂oyì.h
+"
+
+6 
+	$com∑ªEm∂oyì
+(* 
+pEm∂oyìA
+,* 
+pEm∂oyìB
+)
+
+9 if(((
+Em∂oyì
+*)
+pEm∂oyìA
+)->
+ßœry
+ > ((Em∂oyì*)
+pEm∂oyìB
+)->salary)
+
+13 if(((
+Em∂oyì
+*)
+pEm∂oyìA
+)->
+ßœry
+ < ((Em∂oyì*)
+pEm∂oyìB
+)->salary)
+
+20 
+	}
+}
+
+22 
+	$¥ötEm∂oyì
+(
+Em∂oyì
+* 
+p
+)
+
+24 
+	`¥ötf
+("Nombª:%†SÆ¨io:%.2f\r\n",
+p
+->
+«me
+,p->
+ßœry
+);
+
+25 
+	}
+}
+
+38 
+Em∂oyì
+* 
+	$√wEm∂oyì
+(
+id
+, 
+«me
+[],
+œ°Name
+[],
+ßœry
+,
+£˘‹
+)
+
+40 
+Em∂oyì
+* 
+ªtu∫Aux
+ = 
+NULL
+;
+
+41 
+Em∂oyì
+* 
+pEm∂oyì
+ = 
+	`mÆloc
+((Employee));
+
+43 if(
+pEm∂oyì
+ !
+NULL
+)
+
+45 
+pEm∂oyì
+->
+id
+ = id;
+
+46 
+	`°r˝y
+(
+pEm∂oyì
+->
+«me
+,name);
+
+47 
+	`°r˝y
+(
+pEm∂oyì
+->
+œ°Name
+,lastName);
+
+48 
+pEm∂oyì
+->
+ßœry
+ = salary;
+
+49 
+pEm∂oyì
+->
+£˘‹
+ = sector;
+
+50 
+pEm∂oyì
+->
+isEm±y
+ = 0;
+
+51 
+ªtu∫Aux
+ = 
+pEm∂oyì
+;
+
+54  
+ªtu∫Aux
+;
+
+56 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\addNodeTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+26 
+	~"../../öc/LökedLi°.h
+"
+
+27 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	#LENGTH
+ 5
+
+	)
+
+33 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+34 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+35 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+36 
+	gid
+[] = {11,20,3,4,9,99};
+
+39 
+	$addNodeTe°Sëup
+()
+
+41 
+	`uã°_¥öt
+("Setup...\r\n");
+
+42 
+	}
+}
+
+44 
+	$addNodeTe°Ca£01
+()
+
+46 
+LökedLi°
+* 
+li°
+;
+
+48 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+49 
+	`ã°_addNode
+(
+li°
+,0,
+NULL
+);
+
+50 
+	`uã°_as£πEquÆsI¡Msg
+(1,
+li°
+->
+size
+,"\nErrorÉnÉl valor de size deÜaÜista se debe incrementarálágregarÇodos\n");
+
+52 
+	}
+}
+
+54 
+	$addNodeTe°Ca£02
+()
+
+56 
+i
+,
+r
+;
+
+57 
+LökedLi°
+* 
+li°
+;
+
+58 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+59 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+61 
+i
+=0; i < 
+LENGTH
+; i++)
+
+63 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+64 
+r
+ = 
+	`ã°_addNode
+(
+li°
+,li°->
+size
+,
+pAux
+[
+i
+]);
+
+65 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <addNode> si seágrego unÇodo correctamente\nÉl valoráÑetornarÉs (0)\n");
+
+68 
+	}
+}
+
+70 
+	$addNodeTe°Ca£03
+()
+
+72 
+i
+;
+
+73 
+LökedLi°
+* 
+li°
+;
+
+74 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+75 
+Node
+* 
+nodoAux
+;
+
+76 
+msg
+[256];
+
+78 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+80 
+i
+=0; i < 
+LENGTH
+; i++)
+
+82 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+83 
+	`ã°_addNode
+(
+li°
+,li°->
+size
+,
+pAux
+[
+i
+]);
+
+86 
+i
+=0;ò< 
+LENGTH
+;i++)
+
+88 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,
+i
+);
+
+89 
+	`uã°_as£πNŸNuŒMsg
+(
+nodoAux
+,"\nExiste unÉrrorál intentar obtenerÉlÇodo.\n El valor deÑetornoÇoÖuede ser NULL\n");
+
+90 
+	`•rötf
+(
+msg
+,"\nEº‹É¿ñ vÆ‹ dêªt‹nÿdê<gëNode>á»sﬁicô¨É»ñemítÿíÜ®Öosici⁄ %i\n",
+i
+);
+
+91 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+nodoAux
+->
+pEÀmít
+,
+pAux
+[
+i
+],
+msg
+);
+
+94 
+	}
+}
+
+97 
+	$addNodeTe°Ca£04
+()
+
+99 
+r
+;
+
+100 
+r
+ = 
+	`ã°_addNode
+(
+NULL
+,0,NULL);
+
+101 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <addNode> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+102 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\addTest.c
+
+37 
+	~"../../ã°ög/uã°.h
+"
+
+38 
+	~<°dio.h
+>
+
+39 
+	~<°dlib.h
+>
+
+40 
+	~<°rög.h
+>
+
+44 
+	~"../../öc/LökedLi°.h
+"
+
+45 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+48 
+	#LENGTH
+ 5
+
+	)
+
+51 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+52 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+53 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+54 
+	gid
+[] = {11,20,3,4,9,99};
+
+57 
+	$addTe°Sëup
+()
+
+59 
+	`uã°_¥öt
+("Setup...\r\n");
+
+60 
+	}
+}
+
+62 
+	$addTe°Ca£01
+()
+
+64 
+LökedLi°
+* 
+li°
+;
+
+66 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+67 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+68 
+	`uã°_as£πEquÆsI¡Msg
+(1,
+li°
+->
+size
+,"\nErrorÉnÉl valor de size deÜaÜista se debe incrementarálágregarÉlementos\n");
+
+69 
+	}
+}
+
+71 
+	$addTe°Ca£02
+()
+
+73 
+i
+,
+r
+;
+
+74 
+LökedLi°
+* 
+li°
+;
+
+75 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+76 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+78 
+i
+=0; i < 
+LENGTH
+; i++)
+
+80 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+81 
+r
+ = 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+82 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <add> si seágrego unÉlemento correctamente\nel valoráÑetornarÉs (0)\n");
+
+85 
+	}
+}
+
+87 
+	$addTe°Ca£03
+()
+
+89 
+i
+;
+
+90 
+LökedLi°
+* 
+li°
+;
+
+91 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+92 
+Node
+* 
+nodoAux
+;
+
+93 
+msg
+[256];
+
+95 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+97 
+i
+=0; i < 
+LENGTH
+; i++)
+
+99 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+100 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+103 
+i
+=0;ò< 
+LENGTH
+;i++)
+
+105 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,
+i
+);
+
+106 
+	`uã°_as£πNŸNuŒMsg
+(
+nodoAux
+,"\nExiste unÉrrorál intentar obtenerÉlÇodo.\nEl valor deÑetornoÇoÖuede ser NULL\n");
+
+107 
+	`•rötf
+(
+msg
+,"\nEº‹É¿ñ vÆ‹ dêªt‹nÿdêÆ sﬁicô¨É»ñemítÿíÜ®Öosici⁄ %i\n",
+i
+);
+
+108 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+nodoAux
+->
+pEÀmít
+,
+pAux
+[
+i
+],
+msg
+);
+
+111 
+	}
+}
+
+114 
+	$addTe°Ca£04
+()
+
+116 
+r
+;
+
+117 
+r
+ = 
+	`Œ_add
+(
+NULL
+,NULL);
+
+118 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <add> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+119 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\clearTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$˛órTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$˛órTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+r
+;
+
+39 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+40 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+41 
+r
+ = 
+	`Œ_˛ór
+(
+li°
+);
+
+42 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <clear> siÜosÖarametros son correctosÉs 0\n");
+
+43 
+	}
+}
+
+45 
+	$˛órTe°Ca£02
+()
+
+47 
+LökedLi°
+* 
+li°
+;
+
+48 * 
+pEÀmít
+;
+
+49 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+50 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+51 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+52 
+	`Œ_˛ór
+(
+li°
+);
+
+53 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+54 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+55 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,1);
+
+56 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <get>ál solicitar \nunÉlementoÜuego deÉliminar susántecesores con <clear>\n");
+
+57 
+	}
+}
+
+60 
+	$˛órTe°Ca£03
+()
+
+62 
+r
+;
+
+63 
+r
+ = 
+	`Œ_˛ór
+(
+NULL
+);
+
+64 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <clear> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+65 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\cloneTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+31 
+	#LENGTH
+ 5
+
+	)
+
+34 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+35 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+36 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+37 
+	gid
+[] = {11,20,3,4,9,99};
+
+40 
+	$˛⁄eTe°Sëup
+()
+
+42 
+	`uã°_¥öt
+("Setup...\r\n");
+
+43 
+	}
+}
+
+46 
+	$˛⁄eTe°Ca£01
+()
+
+48 
+LökedLi°
+* 
+li°
+;
+
+50 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+51 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+53 
+	`uã°_as£πNŸNuŒMsg
+(
+	`Œ_˛⁄e
+(
+li°
+),"\nErrorÉnÉl valor deÑetorno de <clone> siÜosÖarametros son correctos\nno debeÑetornar NULL\n");
+
+55 
+	}
+}
+
+57 
+	$˛⁄eTe°Ca£02
+()
+
+59 
+i
+;
+
+60 
+LökedLi°
+* 
+li°
+;
+
+61 
+LökedLi°
+* 
+pSubLi°
+;
+
+62 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+63 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+65 
+i
+=0; i < 
+LENGTH
+; i++)
+
+67 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+68 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+71 
+pSubLi°
+ = 
+	`Œ_˛⁄e
+(
+li°
+);
+
+73 
+i
+=0; i < 
+LENGTH
+; i++)
+
+75 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+	`Œ_gë
+(
+pSubLi°
+,
+i
+),Œ_gë(
+li°
+,i),"Error:ÜaÜista clonada difiere deÜa original");
+
+77 
+	}
+}
+
+80 
+	$˛⁄eTe°Ca£03
+()
+
+82 
+i
+;
+
+83 
+LökedLi°
+* 
+li°
+;
+
+84 
+LökedLi°
+* 
+pSubLi°
+;
+
+85 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+87 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+89 
+i
+=0; i < 
+LENGTH
+; i++)
+
+91 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+92 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+95 
+pSubLi°
+ = 
+	`Œ_˛⁄e
+(
+NULL
+);
+
+96 
+	`uã°_as£πNuŒMsg
+(
+pSubLi°
+,"\nErrorÉnÉl valor deÑetorno de <clone> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (NULL)\n");
+
+97 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\containsAllTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+31 
+	#LENGTH
+ 5
+
+	)
+
+34 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+35 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+36 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+37 
+	gid
+[] = {11,20,3,4,9,99};
+
+40 
+	$c⁄èösAŒTe°Sëup
+()
+
+42 
+	`uã°_¥öt
+("Setup...\r\n");
+
+43 
+	}
+}
+
+46 
+	$c⁄èösAŒTe°Ca£01
+()
+
+48 
+r
+;
+
+49 
+LökedLi°
+* 
+li°
+;
+
+51 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+52 
+r
+ = 
+	`Œ_c⁄èösAŒ
+(
+li°
+,list);
+
+53 
+	`uã°_as£πNŸEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <containsAll> siÜosÖarametros son correctos\n debeÑetornar 0 o 1\n");
+
+54 
+	}
+}
+
+57 
+	$c⁄èösAŒTe°Ca£02
+()
+
+59 
+i
+,
+r
+;
+
+60 
+LökedLi°
+* 
+li°
+;
+
+61 
+LökedLi°
+* 
+pOthîLi°
+;
+
+62 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+64 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+65 
+pOthîLi°
+ = 
+	`Œ_√wLökedLi°
+();
+
+67 
+i
+=0; i < 
+LENGTH
+; i++)
+
+69 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+70 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+71 
+	`Œ_add
+(
+pOthîLi°
+,
+pAux
+[
+i
+]);
+
+74 
+	`Œ_ªmove
+(
+li°
+,0);
+
+76 
+r
+ = 
+	`Œ_c⁄èösAŒ
+(
+li°
+,
+pOthîLi°
+);
+
+77 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+, 0 ,"ErrorÉnÉl valor deÑetorno <containsAll> siÜaÜista2ÇoÉsta contenida se debeÑetornar 0");
+
+80 
+	}
+}
+
+82 
+	$c⁄èösAŒTe°Ca£03
+()
+
+84 
+i
+,
+r
+;
+
+85 
+LökedLi°
+* 
+li°
+;
+
+86 
+LökedLi°
+* 
+pOthîLi°
+;
+
+87 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+89 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+90 
+pOthîLi°
+ = 
+	`Œ_√wLökedLi°
+();
+
+92 
+i
+=0; i < 
+LENGTH
+; i++)
+
+94 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+95 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+96 
+	`Œ_add
+(
+pOthîLi°
+,
+pAux
+[
+i
+]);
+
+99 
+r
+ = 
+	`Œ_c⁄èösAŒ
+(
+li°
+,
+pOthîLi°
+);
+
+100 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+, 1 ,"ErrorÉnÉl valor deÑetorno <containsAll> siÜaÜista2ÇoÉsta contenida se debeÑetornar 0");
+
+103 
+	}
+}
+
+105 
+	$c⁄èösAŒTe°Ca£04
+()
+
+107 
+LökedLi°
+* 
+li°
+;
+
+108 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+109 
+	`uã°_as£πEquÆsI¡Msg
+(
+	`Œ_c⁄èösAŒ
+(
+li°
+,
+NULL
+),-1,"\nErrorÉnÉl valor deÑetorno de <containsAll> siÜaÜista (this)ÖasadaÉs NULL\nÉl valoráÑetornarÉs -1\n");
+
+110 
+	`uã°_as£πEquÆsI¡Msg
+(
+	`Œ_c⁄èösAŒ
+(
+NULL
+,
+li°
+),-1,"\nErrorÉnÉl valor deÑetorno de <containsAll> siÜaÜista (this2)ÖasadaÉs NULL\nÉl valoráÑetornarÉs -1\n");
+
+111 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\containsTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+26 
+	~"../../öc/LökedLi°.h
+"
+
+27 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	#LENGTH
+ 5
+
+	)
+
+33 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+34 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+35 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+36 
+	gid
+[] = {11,20,3,4,9,99};
+
+39 
+	$c⁄èösTe°Sëup
+()
+
+41 
+	`uã°_¥öt
+("Setup...\r\n");
+
+42 
+	}
+}
+
+44 
+	$c⁄èösTe°Ca£01
+()
+
+46 
+r
+;
+
+47 
+LökedLi°
+* 
+li°
+;
+
+49 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+50 
+r
+ = 
+	`Œ_c⁄èös
+(
+li°
+,
+NULL
+);
+
+51 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <contains> siÜosÖarametros son correctos\n debeÑetornar 0 o 1\n");
+
+52 
+	}
+}
+
+55 
+	$c⁄èösTe°Ca£02
+()
+
+57 
+i
+, 
+r
+;
+
+58 
+LökedLi°
+* 
+li°
+;
+
+59 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+61 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+63 
+i
+=0; i < 
+LENGTH
+; i++)
+
+65 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+66 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+68 
+r
+ = 
+	`Œ_c⁄èös
+(
+li°
+,
+NULL
+);
+
+69 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <contains> siÜosÖarametros\n son correctos y NO contieneÉlÉlemento debeÑetornar 0\n");
+
+70 
+i
+=0; i < 
+LENGTH
+; i++)
+
+72 
+r
+ = 
+	`Œ_c⁄èös
+(
+li°
+,
+pAux
+[
+i
+]);
+
+73 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,1,"\nErrorÉnÉl valor deÑetorno de <contains> siÜosÖarametros\n son correctos y contieneÉlÉlemento debeÑetornar 1\n");
+
+76 
+	}
+}
+
+78 
+	$c⁄èösTe°Ca£03
+()
+
+81 
+	`uã°_as£πEquÆsI¡Msg
+(
+	`Œ_c⁄èös
+(
+NULL
+,NULL),-1,"\nErrorÉnÉl valor deÑetorno de <contains> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs -1\n");
+
+82 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\deleteLinkedListTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$dñëeLökedLi°Te°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$dñëeLökedLi°Te°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+r
+;
+
+39 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+40 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+41 
+r
+ = 
+	`Œ_dñëeLökedLi°
+(
+li°
+);
+
+42 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <deleteLinkedList> siÜosÖarametros son correctosÉs 0\n");
+
+43 
+	}
+}
+
+46 
+	$dñëeLökedLi°Te°Ca£02
+()
+
+48 
+r
+;
+
+49 
+r
+ = 
+	`Œ_dñëeLökedLi°
+(
+NULL
+);
+
+50 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <deleteLinkedList> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+51 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\getNodeTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$gëNodeTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$gëNodeTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+Node
+* 
+nodo1
+;
+
+39 
+Node
+* 
+nodo2
+;
+
+40 
+Node
+* 
+nodoAux
+;
+
+42 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+43 
+nodo1
+ = 
+	`mÆloc
+((
+Node
+));
+
+44 
+nodo2
+ = 
+	`mÆloc
+((
+Node
+));
+
+45 
+nodo1
+->
+pNextNode
+ = 
+nodo2
+;
+
+46 
+nodo2
+->
+pNextNode
+ = 
+NULL
+;
+
+47 
+li°
+->
+pFú°Node
+ = 
+nodo1
+;
+
+48 
+li°
+->
+size
+=2;
+
+49 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,0);
+
+50 
+	`uã°_as£πNŸNuŒMsg
+(
+nodoAux
+,"\nErrorÉnÉl valor deÑetorno de <getNode> siÜosÖarametros son correctos\n yÜaÜistaÅieneÉlementosÜa funcionÑetornaÉlÖunteroálÇodo\n");
+
+52 
+	}
+}
+
+55 
+	$gëNodeTe°Ca£02
+()
+
+57 
+LökedLi°
+* 
+li°
+;
+
+58 
+Node
+* 
+nodo1
+;
+
+59 
+Node
+* 
+nodo2
+;
+
+60 
+Node
+* 
+nodoAux
+;
+
+62 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+63 
+nodo1
+ = 
+	`mÆloc
+((
+Node
+));
+
+64 
+nodo2
+ = 
+	`mÆloc
+((
+Node
+));
+
+65 
+nodo1
+->
+pNextNode
+ = 
+nodo2
+;
+
+66 
+nodo2
+->
+pNextNode
+ = 
+NULL
+;
+
+67 
+li°
+->
+pFú°Node
+ = 
+nodo1
+;
+
+68 
+li°
+->
+size
+=2;
+
+69 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,0);
+
+70 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+nodoAux
+,
+nodo1
+,"\nErrorÉnÉl valor deÑetorno de <getNode>ál solicitarÉlÖrimerÉlemento\n");
+
+72 
+	}
+}
+
+74 
+	$gëNodeTe°Ca£03
+()
+
+76 
+LökedLi°
+* 
+li°
+;
+
+77 
+Node
+* 
+nodo1
+;
+
+78 
+Node
+* 
+nodo2
+;
+
+79 
+Node
+* 
+nodoAux
+;
+
+81 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+82 
+nodo1
+ = 
+	`mÆloc
+((
+Node
+));
+
+83 
+nodo2
+ = 
+	`mÆloc
+((
+Node
+));
+
+84 
+nodo1
+->
+pNextNode
+ = 
+nodo2
+;
+
+85 
+nodo2
+->
+pNextNode
+ = 
+NULL
+;
+
+86 
+li°
+->
+pFú°Node
+ = 
+nodo1
+;
+
+87 
+li°
+->
+size
+=2;
+
+88 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,1);
+
+89 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+nodoAux
+,
+nodo2
+,"\nErrorÉnÉl valor deÑetorno de <getNode>ál solicitarÉl ultimoÉlemento\n");
+
+91 
+	}
+}
+
+93 
+	$gëNodeTe°Ca£04
+()
+
+95 
+LökedLi°
+* 
+li°
+;
+
+96 
+Node
+* 
+nodo1
+;
+
+97 
+Node
+* 
+nodo2
+;
+
+98 
+Node
+* 
+nodoAux
+;
+
+100 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+101 
+nodo1
+ = 
+	`mÆloc
+((
+Node
+));
+
+102 
+nodo2
+ = 
+	`mÆloc
+((
+Node
+));
+
+103 
+nodo1
+->
+pNextNode
+ = 
+nodo2
+;
+
+104 
+nodo2
+->
+pNextNode
+ = 
+NULL
+;
+
+105 
+li°
+->
+pFú°Node
+ = 
+nodo1
+;
+
+106 
+li°
+->
+size
+=1;
+
+107 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,-1);
+
+108 
+	`uã°_as£πNuŒMsg
+(
+nodoAux
+, "\nErrorÉnÉl valor deÑetorno de <getNode>ál solicitar unÉlemento fuera de indice (-1),\n se deberiaÑetornar NULL\n");
+
+109 
+nodoAux
+ = 
+	`ã°_gëNode
+(
+li°
+,1);
+
+110 
+	`uã°_as£πNuŒMsg
+(
+nodoAux
+, "\nErrorÉnÉl valor deÑetorno de <getNode>ál solicitar unÉlemento fuera de indice (>=áÜl_len),\n se deberiaÑetornar NULL\n");
+
+113 
+	}
+}
+
+115 
+	$gëNodeTe°Ca£05
+()
+
+117 
+	`uã°_as£πNuŒMsg
+(
+	`ã°_gëNode
+(
+NULL
+,0),"\nErrorÉnÉl valor deÑetorno de <get> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+118 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\getTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$gëTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$gëTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 * 
+pEÀmít
+;
+
+39 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+40 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+41 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+42 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,0);
+
+43 
+	`uã°_as£πNŸNuŒMsg
+(
+pEÀmít
+,"\nErrorÉnÉl valor deÑetorno de <get> siÜosÖarametros son correctos\n yÜaÜistaÅieneÉlementosÜa funcionÑetornaÉlÖunteroálÉlemento\n");
+
+45 
+	}
+}
+
+48 
+	$gëTe°Ca£02
+()
+
+50 
+LökedLi°
+* 
+li°
+;
+
+51 * 
+pEÀmít
+;
+
+52 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+54 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+55 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+56 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,0);
+
+57 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <get>ál solicitarÉlÖrimerÉlemento\n");
+
+59 
+	}
+}
+
+61 
+	$gëTe°Ca£03
+()
+
+63 
+LökedLi°
+* 
+li°
+;
+
+64 * 
+pEÀmít
+;
+
+65 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+67 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+68 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+69 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+70 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,1);
+
+71 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <getNode>ál solicitarÉl ultimoÉlemento\n");
+
+72 
+	}
+}
+
+74 
+	$gëTe°Ca£04
+()
+
+76 
+LökedLi°
+* 
+li°
+;
+
+77 * 
+pEÀmít
+;
+
+78 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+80 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+81 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+82 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+83 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,-1);
+
+84 
+	`uã°_as£πNuŒMsg
+(
+pEÀmít
+, "\nErrorÉnÉl valor deÑetorno de <get>ál solicitar unÉlemento fuera de indice (< 0),\n se deberiaÑetornar NULL\n");
+
+85 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,2);
+
+86 
+	`uã°_as£πNuŒMsg
+(
+pEÀmít
+, "\nErrorÉnÉl valor deÑetorno de <get>ál solicitar unÉlemento fuera de indice (>=Ül_len),\n se deberiaÑetornar NULL\n");
+
+87 
+	}
+}
+
+89 
+	$gëTe°Ca£05
+()
+
+92 
+	`uã°_as£πNuŒMsg
+(
+	`Œ_gë
+(
+NULL
+,0),"\nErrorÉnÉl valor deÑetorno de <get> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs NULL\n");
+
+93 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\indexOfTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$ödexOfTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$ödexOfTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+r
+;
+
+39 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+40 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+41 
+r
+ = 
+	`Œ_ödexOf
+(
+li°
+,
+NULL
+);
+
+42 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <indexOf> siÜosÖarametros son correctos y \nelÉlementoÉsta contenido se debeÑetornarÜaÖosicion delÉlemento\n");
+
+43 
+r
+ = 
+	`Œ_ödexOf
+(
+li°
+,(*)1);
+
+44 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <indexOf> siÜosÖarametros son correctos y \nelÉlemento NOÉsta contenido se debeÑetornar -1\n");
+
+45 
+	}
+}
+
+47 
+	$ödexOfTe°Ca£02
+()
+
+49 
+r
+;
+
+50 
+r
+ = 
+	`Œ_ödexOf
+(
+NULL
+,0);
+
+51 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <indexOf> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+52 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\isEmptyTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$isEm±yTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$isEm±yTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+r
+;
+
+39 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+40 
+r
+ = 
+	`Œ_isEm±y
+(
+li°
+);
+
+41 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,1,"\nErrorÉnÉl valor deÑetorno de <isEmpty> siÜosÖarametros son correctos y \nlaÜista NOÅieneÉlementos debeÑetornar 0\n");
+
+42 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+43 
+r
+ = 
+	`Œ_isEm±y
+(
+li°
+);
+
+44 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <isEmpty> siÜosÖarametros son correctos y \nlaÜistaÅieneÉlementos debeÑetornar 0\n");
+
+46 
+	}
+}
+
+48 
+	$isEm±yTe°Ca£02
+()
+
+50 
+r
+;
+
+51 
+r
+ = 
+	`Œ_isEm±y
+(
+NULL
+);
+
+52 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <isEmpty> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+53 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\lenTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+26 
+	~"../../öc/LökedLi°.h
+"
+
+27 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	#LENGTH
+ 5
+
+	)
+
+33 
+	$ÀnTe°Sëup
+()
+
+35 
+	`uã°_¥öt
+("Setup...\r\n");
+
+36 
+	}
+}
+
+39 
+	$ÀnTe°Ca£01
+()
+
+41 
+r
+;
+
+42 
+LökedLi°
+* 
+li°
+;
+
+44 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+45 
+li°
+->
+size
+ = 5;
+
+46 
+r
+ = 
+	`Œ_Àn
+(
+li°
+);
+
+47 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,
+LENGTH
+,"\nErrorÉnÉl valor deÑetorno de <len> siÜosÖarametros son correctos\nÜa funcionÑetornaÜa cantidad deÉlementos deÜaÜista\n");
+
+49 
+	}
+}
+
+51 
+	$ÀnTe°Ca£02
+()
+
+53 
+r
+;
+
+54 
+LökedLi°
+* 
+li°
+;
+
+55 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+56 
+r
+ = 
+	`Œ_Àn
+(
+li°
+);
+
+57 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <len> siÜosÖarametros son correctos \nyÜaÜistaÉsta vaciaÜa funcionÑetorna 0\n");
+
+59 
+	}
+}
+
+61 
+	$ÀnTe°Ca£03
+()
+
+63 
+r
+;
+
+65 
+r
+ = 
+	`Œ_Àn
+(
+NULL
+);
+
+66 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <len> siÉlÖunteroáÜaÜistaÉs NULL\nÜa funcionÑetorna -1\n");
+
+67 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\main_test.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+23 
+	~"../öc/√wTe°.h
+"
+
+24 
+	~"../öc/addTe°.h
+"
+
+25 
+	~"../öc/gëNodeTe°.h
+"
+
+26 
+	~"../öc/addNodeTe°.h
+"
+
+30 
+	~"../öc/dñëeLökedLi°Te°.h
+"
+
+31 
+	~"../öc/ÀnTe°.h
+"
+
+32 
+	~"../öc/gëTe°.h
+"
+
+33 
+	~"../öc/c⁄èösTe°.h
+"
+
+34 
+	~"../öc/£tTe°.h
+"
+
+35 
+	~"../öc/ªmoveTe°.h
+"
+
+36 
+	~"../öc/˛órTe°.h
+"
+
+37 
+	~"../öc/˛⁄eTe°.h
+"
+
+38 
+	~"../öc/pushTe°.h
+"
+
+39 
+	~"../öc/ödexOfTe°.h
+"
+
+40 
+	~"../öc/isEm±yTe°.h
+"
+
+41 
+	~"../öc/p›Te°.h
+"
+
+42 
+	~"../öc/subLi°Te°.h
+"
+
+43 
+	~"../öc/c⁄èösAŒTe°.h
+"
+
+44 
+	~"../öc/s‹tTe°.h
+"
+
+47 
+	$°¨tTe°ög
+(
+ã°Group
+)
+
+51 
+ã°Group
+)
+
+54 
+	`uã°_¥ötSèπTe°ög
+("ll_newLinkedList()");
+
+55 
+	`uã°_öô
+();
+
+56 
+	`uã°_°¨tTe°
+(
+√wTe°Ca£01
+,
+√wTe°Sëup
+,">Caso [Crear unÇuevo LinkedList]");
+
+57 
+	`uã°_¥ötSèti°ics
+("ll_newLinkedList()");
+
+61 
+	`uã°_¥ötSèπTe°ög
+("ll_len()");
+
+62 
+	`uã°_öô
+();
+
+63 
+	`uã°_°¨tTe°
+(
+ÀnTe°Ca£01
+,
+ÀnTe°Sëup
+,">Caso [Cantidad deÉlementos de unaÜista conÉlementos]");
+
+64 
+	`uã°_°¨tTe°
+(
+ÀnTe°Ca£02
+,
+ÀnTe°Sëup
+,">Caso [Cantidad deÉlementos de unaÜista vacia]");
+
+65 
+	`uã°_°¨tTe°
+(
+ÀnTe°Ca£03
+,
+ÀnTe°Sëup
+,">Caso [Cantidad deÉlementos de unaÜista queápuntaá NULL]]");
+
+66 
+	`uã°_¥ötSèti°ics
+("ll_len()");
+
+69 
+	`uã°_¥ötSèπTe°ög
+("ll_getNode()");
+
+70 
+	`uã°_öô
+();
+
+71 
+	`uã°_°¨tTe°
+(
+gëNodeTe°Ca£01
+,
+gëNodeTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+72 
+	`uã°_°¨tTe°
+(
+gëNodeTe°Ca£02
+,
+gëNodeTe°Sëup
+,">Caso [SolicitarÉlÖrimerÇodo]");
+
+73 
+	`uã°_°¨tTe°
+(
+gëNodeTe°Ca£03
+,
+gëNodeTe°Sëup
+,">Caso [SolicitarÉl ultimoÇodo]");
+
+74 
+	`uã°_°¨tTe°
+(
+gëNodeTe°Ca£04
+,
+gëNodeTe°Sëup
+,">Caso [SolicitaÇodo fuera de indice]");
+
+75 
+	`uã°_°¨tTe°
+(
+gëNodeTe°Ca£05
+,
+gëNodeTe°Sëup
+,">Caso [SolicitaÇodoÖasando unaÜista NULL]");
+
+76 
+	`uã°_¥ötSèti°ics
+("ll_getNode()");
+
+79 
+	`uã°_¥ötSèπTe°ög
+("ll_addNode()");
+
+80 
+	`uã°_öô
+();
+
+81 
+	`uã°_°¨tTe°
+(
+addNodeTe°Ca£01
+,
+addNodeTe°Sëup
+,">Caso [Verifica si se incrementaÉl size deÜaÜistaálágregarÇodos]");
+
+82 
+	`uã°_°¨tTe°
+(
+addNodeTe°Ca£02
+,
+addNodeTe°Sëup
+,">Caso [Agregar unÇuevoÇodoáÜaÜista]");
+
+83 
+	`uã°_°¨tTe°
+(
+addNodeTe°Ca£03
+,
+addNodeTe°Sëup
+,">Caso [VerificarÉlÇodoágregado]");
+
+84 
+	`uã°_°¨tTe°
+(
+addNodeTe°Ca£04
+,
+addNodeTe°Sëup
+,">Caso [IntentarágregarÇodosÖasando unaÜista NULL]");
+
+85 
+	`uã°_¥ötSèti°ics
+("ll_addNode()");
+
+89 
+	`uã°_¥ötSèπTe°ög
+("ll_add()");
+
+90 
+	`uã°_öô
+();
+
+91 
+	`uã°_°¨tTe°
+(
+addTe°Ca£01
+,
+addTe°Sëup
+,">Caso [Verifica si se incrementaÉl size deÜaÜistaálágregarÉlementos]");
+
+92 
+	`uã°_°¨tTe°
+(
+addTe°Ca£02
+,
+addTe°Sëup
+,">Caso [Agregar unÇuevoÉlementoáÜaÜista]");
+
+93 
+	`uã°_°¨tTe°
+(
+addTe°Ca£03
+,
+addTe°Sëup
+,">Caso [VerificarÉlÉlementoágregado]");
+
+94 
+	`uã°_°¨tTe°
+(
+addTe°Ca£04
+,
+addTe°Sëup
+,">Caso [IntentarágregarÉlementosÖasando unaÜista NULL]");
+
+95 
+	`uã°_¥ötSèti°ics
+("ll_add()");
+
+99 
+	`uã°_¥ötSèπTe°ög
+("ll_get()");
+
+100 
+	`uã°_öô
+();
+
+101 
+	`uã°_°¨tTe°
+(
+gëTe°Ca£01
+,
+gëTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+102 
+	`uã°_°¨tTe°
+(
+gëTe°Ca£02
+,
+gëTe°Sëup
+,">Caso [SolicitarÉlÖrimerÉlemento]");
+
+103 
+	`uã°_°¨tTe°
+(
+gëTe°Ca£03
+,
+gëTe°Sëup
+,">Caso [SolicitarÉl ultimoÉlemento]");
+
+104 
+	`uã°_°¨tTe°
+(
+gëTe°Ca£04
+,
+gëTe°Sëup
+,">Caso [SolicitaÉlementos fuera de indice]");
+
+105 
+	`uã°_°¨tTe°
+(
+gëTe°Ca£05
+,
+gëTe°Sëup
+,">Caso [SolicitarÉlementosÖasando unaÜista NULL]");
+
+106 
+	`uã°_¥ötSèti°ics
+("ll_get()");
+
+110 
+	`uã°_¥ötSèπTe°ög
+("ll_set()");
+
+111 
+	`uã°_öô
+();
+
+112 
+	`uã°_°¨tTe°
+(
+£tTe°Ca£01
+,
+£tTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+113 
+	`uã°_°¨tTe°
+(
+£tTe°Ca£02
+,
+£tTe°Sëup
+,">Caso [Verifica unÉlemento seteado]");
+
+114 
+	`uã°_°¨tTe°
+(
+£tTe°Ca£03
+,
+£tTe°Sëup
+,">Caso [Intenta setear unÉlemento fuera de indice]");
+
+115 
+	`uã°_°¨tTe°
+(
+£tTe°Ca£04
+,
+£tTe°Sëup
+,">Caso [Intenta setear unÉlementoÖasando unaÜista NULL]]");
+
+116 
+	`uã°_¥ötSèti°ics
+("ll_set()");
+
+120 
+	`uã°_¥ötSèπTe°ög
+("ll_remove()");
+
+121 
+	`uã°_öô
+();
+
+122 
+	`uã°_°¨tTe°
+(
+ªmoveTe°Ca£01
+,
+ªmoveTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+123 
+	`uã°_°¨tTe°
+(
+ªmoveTe°Ca£02
+,
+ªmoveTe°Sëup
+,">Caso [Verifica si unÉlemento fue correctamenteÑemovido]");
+
+124 
+	`uã°_°¨tTe°
+(
+ªmoveTe°Ca£03
+,
+ªmoveTe°Sëup
+,">Caso [IntentaÑemover unÉlemento fuera de indice]");
+
+125 
+	`uã°_°¨tTe°
+(
+ªmoveTe°Ca£04
+,
+ªmoveTe°Sëup
+,">Caso [IntentaÑemover unÉlementoÖasando unaÜista NULL]]");
+
+126 
+	`uã°_¥ötSèti°ics
+("ll_remove()");
+
+130 
+	`uã°_¥ötSèπTe°ög
+("ll_clear()");
+
+131 
+	`uã°_öô
+();
+
+132 
+	`uã°_°¨tTe°
+(
+˛órTe°Ca£01
+,
+˛órTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+133 
+	`uã°_°¨tTe°
+(
+˛órTe°Ca£02
+,
+˛órTe°Sëup
+,">Caso [Verifica siÅodosÜosÉlemento fueron correctamenteÑemovidos]");
+
+134 
+	`uã°_°¨tTe°
+(
+˛órTe°Ca£03
+,
+˛órTe°Sëup
+,">Caso [IntentaÑealizar un clearÖasando unaÜista NULL]");
+
+135 
+	`uã°_¥ötSèti°ics
+("ll_clear()");
+
+139 
+	`uã°_¥ötSèπTe°ög
+("ll_deleteLinkedList()");
+
+140 
+	`uã°_öô
+();
+
+141 
+	`uã°_°¨tTe°
+(
+dñëeLökedLi°Te°Ca£01
+,
+dñëeLökedLi°Te°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+142 
+	`uã°_°¨tTe°
+(
+dñëeLökedLi°Te°Ca£02
+,
+dñëeLökedLi°Te°Sëup
+,">Caso [IntentaÑealizar un deleteLinkedListÖasando unaÜista NULL]]");
+
+143 
+	`uã°_¥ötSèti°ics
+("ll_deleteLinkedList()");
+
+147 
+	`uã°_¥ötSèπTe°ög
+("ll_indexOf()");
+
+148 
+	`uã°_öô
+();
+
+149 
+	`uã°_°¨tTe°
+(
+ödexOfTe°Ca£01
+,
+ödexOfTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+150 
+	`uã°_°¨tTe°
+(
+ödexOfTe°Ca£02
+,
+ödexOfTe°Sëup
+,">Caso [IntentaÑealizar un indexOfÖasando unaÜista NULL]");
+
+151 
+	`uã°_¥ötSèti°ics
+("ll_indexOf()");
+
+155 
+	`uã°_¥ötSèπTe°ög
+("ll_isEmpty()");
+
+156 
+	`uã°_öô
+();
+
+157 
+	`uã°_°¨tTe°
+(
+isEm±yTe°Ca£01
+,
+isEm±yTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+158 
+	`uã°_°¨tTe°
+(
+isEm±yTe°Ca£02
+,
+isEm±yTe°Sëup
+,">Caso [IntentaÑealizar un isEmptyÖasando unaÜista NULL]");
+
+159 
+	`uã°_¥ötSèti°ics
+("ll_isEmpty()");
+
+163 
+	`uã°_¥ötSèπTe°ög
+("ll_push()");
+
+164 
+	`uã°_öô
+();
+
+165 
+	`uã°_°¨tTe°
+(
+pushTe°Ca£01
+,
+pushTe°Sëup
+,">Caso [Verifica si se incrementaÉl size deÜaÜistaálágregarÉlementos]");
+
+166 
+	`uã°_°¨tTe°
+(
+pushTe°Ca£02
+,
+pushTe°Sëup
+,">Caso [Agregar unÇuevoÉlementoáÜaÜista]");
+
+167 
+	`uã°_°¨tTe°
+(
+pushTe°Ca£03
+,
+pushTe°Sëup
+,">Caso [VerificarÉlÉlementoágregado]");
+
+168 
+	`uã°_°¨tTe°
+(
+pushTe°Ca£04
+,
+pushTe°Sëup
+,">Caso [Intenta insertar unÉlemento fuera del indice]");
+
+169 
+	`uã°_°¨tTe°
+(
+pushTe°Ca£05
+,
+pushTe°Sëup
+,">Caso [Intentar insertarÉlementosÖasando unaÜista NULL]");
+
+170 
+	`uã°_¥ötSèti°ics
+("ll_push()");
+
+174 
+	`uã°_¥ötSèπTe°ög
+("ll_pop()");
+
+175 
+	`uã°_öô
+();
+
+176 
+	`uã°_°¨tTe°
+(
+p›Te°Ca£01
+,
+p›Te°Sëup
+,">Caso [Verifica si se decrementaÉl size deÜaÜistaál quitarÉlementos]");
+
+177 
+	`uã°_°¨tTe°
+(
+p›Te°Ca£02
+,
+p›Te°Sëup
+,">Caso [Agregar unÇuevoÉlementoáÜaÜista]");
+
+178 
+	`uã°_°¨tTe°
+(
+p›Te°Ca£03
+,
+p›Te°Sëup
+,">Caso [VerificarÉlÉlemento quitado]");
+
+179 
+	`uã°_°¨tTe°
+(
+p›Te°Ca£04
+,
+p›Te°Sëup
+,">Caso [IntentaÉliminar unÉlemento fuera del indice]");
+
+180 
+	`uã°_°¨tTe°
+(
+p›Te°Ca£05
+,
+p›Te°Sëup
+,">Caso [Intentar insertarÉlementosÖasando unaÜista NULL]");
+
+181 
+	`uã°_¥ötSèti°ics
+("ll_pop()");
+
+185 
+	`uã°_¥ötSèπTe°ög
+("ll_contains()");
+
+186 
+	`uã°_öô
+();
+
+187 
+	`uã°_°¨tTe°
+(
+c⁄èösTe°Ca£01
+,
+c⁄èösTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+188 
+	`uã°_°¨tTe°
+(
+c⁄èösTe°Ca£02
+,
+c⁄èösTe°Sëup
+,">Caso [Verifica siÉncuentraÉlementos contenidos]");
+
+189 
+	`uã°_°¨tTe°
+(
+c⁄èösTe°Ca£03
+,
+c⁄èösTe°Sëup
+,">Caso [Intentar verificar si unÉlementoÉsta contenidoÖasando unaÜista NULL]");
+
+190 
+	`uã°_¥ötSèti°ics
+("ll_contains()");
+
+194 
+	`uã°_¥ötSèπTe°ög
+("ll_containsAll()");
+
+195 
+	`uã°_öô
+();
+
+196 
+	`uã°_°¨tTe°
+(
+c⁄èösAŒTe°Ca£01
+,
+c⁄èösAŒTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+197 
+	`uã°_°¨tTe°
+(
+c⁄èösAŒTe°Ca£02
+,
+c⁄èösAŒTe°Sëup
+,">Caso [VerificaÉl valor deÑetorno cuandoÜaÜista2 NOÉsta contenidaÉnÜaÜista1]");
+
+198 
+	`uã°_°¨tTe°
+(
+c⁄èösAŒTe°Ca£03
+,
+c⁄èösAŒTe°Sëup
+,">Caso [VerificaÉl valor deÑetorno cuandoÜaÜista2 SIÉsta contenidaÉnÜaÜista1]");
+
+199 
+	`uã°_°¨tTe°
+(
+c⁄èösAŒTe°Ca£04
+,
+c⁄èösAŒTe°Sëup
+,">Caso [Intentar verificar si unÉlementoÉsta contenidoÖasando unaÜista NULL]");
+
+200 
+	`uã°_¥ötSèti°ics
+("ll_containsAll()");
+
+204 
+	`uã°_¥ötSèπTe°ög
+("ll_subList()");
+
+205 
+	`uã°_öô
+();
+
+206 
+	`uã°_°¨tTe°
+(
+subLi°Te°Ca£01
+,
+subLi°Te°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+207 
+	`uã°_°¨tTe°
+(
+subLi°Te°Ca£02
+,
+subLi°Te°Sëup
+,">Caso [Verifica siÜosÉlementos deÜa subÜista son correctos]");
+
+208 
+	`uã°_°¨tTe°
+(
+subLi°Te°Ca£03
+,
+subLi°Te°Sëup
+,">Caso [Intenta generar sublistas conÖarametros fuera del indice]");
+
+209 
+	`uã°_°¨tTe°
+(
+subLi°Te°Ca£04
+,
+subLi°Te°Sëup
+,">Caso [Intenta crear una sublistaÖasando unaÜista NULL]");
+
+210 
+	`uã°_¥ötSèti°ics
+("ll_subList()");
+
+214 
+	`uã°_¥ötSèπTe°ög
+("ll_clone()");
+
+215 
+	`uã°_öô
+();
+
+216 
+	`uã°_°¨tTe°
+(
+˛⁄eTe°Ca£01
+,
+˛⁄eTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+217 
+	`uã°_°¨tTe°
+(
+˛⁄eTe°Ca£02
+,
+˛⁄eTe°Sëup
+,">Caso [Verifica siÜosÉlementos deÜaÜista clonada son correctos]");
+
+218 
+	`uã°_°¨tTe°
+(
+˛⁄eTe°Ca£03
+,
+˛⁄eTe°Sëup
+,">Caso [Intenta crear unaÜista clonadaÖasando unaÜista NULL]");
+
+219 
+	`uã°_¥ötSèti°ics
+("ll_clone()");
+
+223 
+	`uã°_¥ötSèπTe°ög
+("ll_sort()");
+
+224 
+	`uã°_öô
+();
+
+225 
+	`uã°_°¨tTe°
+(
+s‹tTe°Ca£01
+,
+s‹tTe°Sëup
+,">Caso [VerificaÑetorno conÖarametros correctos]");
+
+226 
+	`uã°_°¨tTe°
+(
+s‹tTe°Ca£02
+,
+s‹tTe°Sëup
+,">Caso [Verifica siÜaÜista seÉncuentra correctamente ordenada]");
+
+227 
+	`uã°_°¨tTe°
+(
+s‹tTe°Ca£03
+,
+s‹tTe°Sëup
+,">Caso [Intenta ordenar unaÜista NULL]");
+
+228 
+	`uã°_°¨tTe°
+(
+s‹tTe°Ca£04
+,
+s‹tTe°Sëup
+,">Caso [Intenta ordenarÖasando unÖunteroáÜa funcion criterio NULL]");
+
+229 
+	`uã°_°¨tTe°
+(
+s‹tTe°Ca£05
+,
+s‹tTe°Sëup
+,">Caso [Intenta ordenarÖasandoÉl orden fuera de valor]");
+
+230 
+	`uã°_¥ötSèti°ics
+("ll_sort()");
+
+235 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\newTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+25 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	$√wTe°Sëup
+()
+
+30 
+	`uã°_¥öt
+("Setup...\r\n");
+
+32 
+	}
+}
+
+34 
+	$√wTe°Ca£01
+()
+
+36 
+LökedLi°
+* 
+li°a
+ = 
+	`Œ_√wLökedLi°
+();
+
+37 
+	`uã°_as£πNŸNuŒMsg
+(
+li°a
+,"\nExiste unÉrror. El valor deÑetornoÇoÖuede ser NULL\n");
+
+38 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\popTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$p›Te°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$p›Te°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 * 
+pEÀmít
+;
+
+39 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+40 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+41 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+42 
+pEÀmít
+ = 
+	`Œ_p›
+(
+li°
+,0);
+
+43 
+	`uã°_as£πNŸNuŒMsg
+(
+pEÀmít
+,"\nErrorÉnÉl valor deÑetorno de <pop> siÜosÖarametros son correctos\n yÜaÜistaÅieneÉlÉlemento solitadoÜa funcionÑetornaÉlÖunteroálÉlemento\n");
+
+45 
+	}
+}
+
+48 
+	$p›Te°Ca£02
+()
+
+50 
+LökedLi°
+* 
+li°
+;
+
+51 * 
+pEÀmít
+;
+
+52 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+54 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+55 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+56 
+pEÀmít
+ = 
+	`Œ_p›
+(
+li°
+,0);
+
+57 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <pop>ál solicitarÉlÖrimerÉlemento\n");
+
+58 
+	`uã°_as£πEquÆsI¡Msg
+(
+	`Œ_Àn
+(
+li°
+),0,"\nErrorÉnÉlÜen() deÜaÜistaÜuego de quitar unÉlemento");
+
+59 
+	}
+}
+
+61 
+	$p›Te°Ca£03
+()
+
+63 
+LökedLi°
+* 
+li°
+;
+
+64 * 
+pEÀmít
+;
+
+65 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+67 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+68 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+69 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+70 
+pEÀmít
+ = 
+	`Œ_p›
+(
+li°
+,1);
+
+71 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <pop>ál solicitarÉl ultimoÉlemento\n");
+
+72 
+	`uã°_as£πEquÆsI¡Msg
+(
+	`Œ_Àn
+(
+li°
+),1,"\nErrorÉnÉlÜen() deÜaÜistaÜuego de quitar unÉlemento");
+
+73 
+	}
+}
+
+75 
+	$p›Te°Ca£04
+()
+
+77 
+LökedLi°
+* 
+li°
+;
+
+78 * 
+pEÀmít
+;
+
+79 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+81 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+82 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+83 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+84 
+pEÀmít
+ = 
+	`Œ_p›
+(
+li°
+,-1);
+
+85 
+	`uã°_as£πNuŒMsg
+(
+pEÀmít
+, "\nErrorÉnÉl valor deÑetorno de <pop>ál solicitar unÉlemento fuera de indice (< 0),\n se deberiaÑetornar NULL\n");
+
+86 
+pEÀmít
+ = 
+	`Œ_p›
+(
+li°
+,2);
+
+87 
+	`uã°_as£πNuŒMsg
+(
+pEÀmít
+, "\nErrorÉnÉl valor deÑetorno de <pop>ál solicitar unÉlemento fuera de indice (>=Ül_len),\n se deberiaÑetornar NULL\n");
+
+88 
+	}
+}
+
+90 
+	$p›Te°Ca£05
+()
+
+93 
+	`uã°_as£πNuŒMsg
+(
+	`Œ_gë
+(
+NULL
+,0),"\nErrorÉnÉl valor deÑetorno de <get> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs NULL\n");
+
+94 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\pushTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+26 
+	~"../../öc/LökedLi°.h
+"
+
+27 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	#LENGTH
+ 5
+
+	)
+
+33 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+34 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+35 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+36 
+	gid
+[] = {11,20,3,4,9,99};
+
+39 
+	$pushTe°Sëup
+()
+
+41 
+	`uã°_¥öt
+("Setup...\r\n");
+
+42 
+	}
+}
+
+44 
+	$pushTe°Ca£01
+()
+
+46 
+LökedLi°
+* 
+li°
+;
+
+48 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+49 
+	`Œ_push
+(
+li°
+,0,
+NULL
+);
+
+50 
+	`uã°_as£πEquÆsI¡Msg
+(1,
+li°
+->
+size
+,"\nErrorÉnÉl valor de size deÜaÜista se debe incrementarálágregar unÇuevoÉlemento\n");
+
+52 
+	}
+}
+
+54 
+	$pushTe°Ca£02
+()
+
+56 
+i
+,
+r
+;
+
+57 
+LökedLi°
+* 
+li°
+;
+
+58 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+59 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+61 
+i
+=0; i < 
+LENGTH
+; i++)
+
+63 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+64 
+r
+ = 
+	`Œ_push
+(
+li°
+,li°->
+size
+,
+pAux
+[
+i
+]);
+
+65 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <push> si seágrego unÉlemento correctamente\nÉl valoráÑetornarÉs (0)\n");
+
+68 
+	}
+}
+
+70 
+	$pushTe°Ca£03
+()
+
+72 
+i
+;
+
+73 
+LökedLi°
+* 
+li°
+;
+
+74 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+75 * 
+pEÀmít
+;
+
+76 
+msg
+[256];
+
+78 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+80 
+i
+=0; i < 
+LENGTH
+; i++)
+
+82 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+83 
+	`Œ_push
+(
+li°
+,li°->
+size
+,
+pAux
+[
+i
+]);
+
+86 
+i
+=0;ò< 
+LENGTH
+;i++)
+
+88 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,
+i
+);
+
+89 
+	`uã°_as£πNŸNuŒMsg
+(
+pEÀmít
+,"\nExiste unÉrrorál intentar obtenerÉlÉlemento.\n El valor deÑetornoÇoÖuede ser NULL\n");
+
+90 
+	`•rötf
+(
+msg
+,"\nEº‹É¿ñ vÆ‹ dêªt‹nÿdê<gë>á»sﬁicô¨É»ñemítÿíÜ®Öosici⁄ %i\n",
+i
+);
+
+91 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pAux
+[
+i
+],
+msg
+);
+
+94 
+	}
+}
+
+96 
+	$pushTe°Ca£04
+()
+
+98 
+LökedLi°
+* 
+li°
+;
+
+99 
+r
+;
+
+100 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+101 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+102 
+r
+ = 
+	`Œ_push
+(
+li°
+,-1,
+NULL
+);
+
+103 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <push>ál intentar setear unÉlemento fuera de indice (< 0),\n se deberiaÑetornar -1\n");
+
+104 
+r
+ = 
+	`Œ_push
+(
+li°
+,2,
+NULL
+);
+
+105 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <push>ál intentar setear unÉlemento fuera de indice (>=Ül_len),\n se deberiaÑetornar -1\n");
+
+106 
+	}
+}
+
+109 
+	$pushTe°Ca£05
+()
+
+111 
+r
+;
+
+112 
+r
+ = 
+	`Œ_push
+(
+NULL
+,0,NULL);
+
+113 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <push> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+114 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\removeTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$ªmoveTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$ªmoveTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+r
+;
+
+39 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+40 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+41 
+r
+ = 
+	`Œ_ªmove
+(
+li°
+,0);
+
+42 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <remove> siÜosÖarametros son correctosÉs 0\n");
+
+43 
+	}
+}
+
+46 
+	$ªmoveTe°Ca£02
+()
+
+48 
+LökedLi°
+* 
+li°
+;
+
+49 * 
+pEÀmít
+;
+
+50 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+51 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+52 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+53 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+54 
+	`Œ_add
+(
+li°
+,
+pEÀmít2
+);
+
+55 
+	`Œ_ªmove
+(
+li°
+,1);
+
+56 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,1);
+
+57 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <get>ál solicitar \nunÉlementoÜuego deÉliminar suántecesor\n");
+
+58 
+	`uã°_as£πEquÆsI¡Msg
+(
+	`Œ_Àn
+(
+li°
+),2,"\nErrorÉnÉlÜen() deÜaÜistaÜuego de quitar unÉlemento");
+
+59 
+	}
+}
+
+61 
+	$ªmoveTe°Ca£03
+()
+
+63 
+LökedLi°
+* 
+li°
+;
+
+64 
+r
+;
+
+65 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+66 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+67 
+r
+ = 
+	`Œ_ªmove
+(
+li°
+,-1);
+
+68 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <remove>ál intentarÉliminar unÉlemento fuera de indice (< 0),\n se deberiaÑetornar -1\n");
+
+69 
+r
+ = 
+	`Œ_ªmove
+(
+li°
+,1);
+
+70 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <remove>ál intentarÉliminar unÉlemento fuera de indice (>=Ül_len),\n se deberiaÑetornar -1\n");
+
+71 
+	}
+}
+
+73 
+	$ªmoveTe°Ca£04
+()
+
+75 
+r
+;
+
+76 
+r
+ = 
+	`Œ_ªmove
+(
+NULL
+,0);
+
+77 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <remove> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+78 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\setTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+30 
+	$£tTe°Sëup
+()
+
+32 
+	`uã°_¥öt
+("Setup...\r\n");
+
+33 
+	}
+}
+
+35 
+	$£tTe°Ca£01
+()
+
+37 
+LökedLi°
+* 
+li°
+;
+
+38 
+r
+;
+
+39 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+40 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+41 
+r
+ = 
+	`Œ_£t
+(
+li°
+,0,
+NULL
+);
+
+42 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <set> siÜosÖarametros son correctosÉs 0\n");
+
+43 
+	}
+}
+
+46 
+	$£tTe°Ca£02
+()
+
+48 
+LökedLi°
+* 
+li°
+;
+
+49 * 
+pEÀmít
+;
+
+50 * 
+pEÀmít2
+ = 
+	`√wEm∂oyì
+(10,"JUAN","PEREZ",1,1);
+
+51 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+52 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+53 
+	`Œ_£t
+(
+li°
+,0,
+pEÀmít2
+);
+
+54 
+pEÀmít
+ = 
+	`Œ_gë
+(
+li°
+,0);
+
+55 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+pEÀmít
+,
+pEÀmít2
+,"\nErrorÉnÉl valor deÑetorno de <get>ál solicitarÉlÖrimerÉlemento steado con <set>\n");
+
+57 
+	}
+}
+
+59 
+	$£tTe°Ca£03
+()
+
+61 
+LökedLi°
+* 
+li°
+;
+
+62 
+r
+;
+
+63 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+64 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+65 
+r
+ = 
+	`Œ_£t
+(
+li°
+,-1,
+NULL
+);
+
+66 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <set>ál intentar setear unÉlemento fuera de indice (< 0),\n se deberiaÑetornar -1\n");
+
+67 
+r
+ = 
+	`Œ_£t
+(
+li°
+,1,
+NULL
+);
+
+68 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <set>ál intentar setear unÉlemento fuera de indice (>=Ül_len),\n se deberiaÑetornar -1\n");
+
+69 
+	}
+}
+
+71 
+	$£tTe°Ca£04
+()
+
+73 
+r
+;
+
+74 
+r
+ = 
+	`Œ_£t
+(
+NULL
+,0,NULL);
+
+75 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <set> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (-1)\n");
+
+76 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\sortTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+31 
+	#LENGTH
+ 6
+
+	)
+
+34 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+35 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+36 
+	gßœry
+[] = {1001,2000,1002,3000,4000,8000};
+
+37 
+	gßœryS‹ãdUp
+[] = {8000,4000,3000,2000,1002,1001};
+
+38 
+	gid
+[] = {11,20,3,4,9,99};
+
+41 
+	$s‹tTe°Sëup
+()
+
+43 
+	`uã°_¥öt
+("Setup...\r\n");
+
+44 
+	}
+}
+
+47 
+	$s‹tTe°Ca£01
+()
+
+49 
+r
+;
+
+50 
+i
+;
+
+51 
+LökedLi°
+* 
+li°
+;
+
+52 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+54 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+55 
+i
+=0; i < 
+LENGTH
+; i++)
+
+57 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+58 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+60 
+r
+ = 
+	`Œ_s‹t
+(
+li°
+, 
+com∑ªEm∂oyì
+,1);
+
+61 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,0,"\nErrorÉnÉl valor deÑetorno de <sort> siÜosÖarametros son correctos\nÜa funcionÑetorna 0\n");
+
+63 
+	}
+}
+
+66 
+	$s‹tTe°Ca£02
+()
+
+68 
+i
+;
+
+69 
+LökedLi°
+* 
+li°
+;
+
+70 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+71 
+Em∂oyì
+* 
+pAuxGë
+[
+LENGTH
+];
+
+73 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+75 
+i
+=0; i < 
+LENGTH
+; i++)
+
+77 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+78 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+81 
+	`Œ_s‹t
+(
+li°
+, 
+com∑ªEm∂oyì
+,0);
+
+83 
+i
+=0; i < 
+LENGTH
+; i++)
+
+85 
+pAuxGë
+[
+i
+] = 
+	`Œ_gë
+(
+li°
+,i);
+
+86 
+	`uã°_as£πNŸNuŒMsg
+(
+pAuxGë
+[
+i
+],"Errorál intentar obtener unÉlementoÜuego de ordenar");
+
+87 
+	`uã°_as£πEquÆsFlﬂtMsg
+(((
+Em∂oyì
+*)
+pAuxGë
+[
+i
+])->
+ßœry
+,
+ßœryS‹ãdUp
+[i],"El orden deÜaÜistaÉs incorrecto");
+
+90 
+	}
+}
+
+91 
+	$s‹tTe°Ca£03
+()
+
+93 
+r
+;
+
+94 
+r
+ = 
+	`Œ_s‹t
+(
+NULL
+, 
+com∑ªEm∂oyì
+,1);
+
+95 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <sort> siÉlÖunteroáÜaÜistaÉs NULL\nÜa funcionÑetorna -1\n");
+
+97 
+	}
+}
+
+100 
+	$s‹tTe°Ca£04
+()
+
+102 
+r
+;
+
+103 
+i
+;
+
+104 
+LökedLi°
+* 
+li°
+;
+
+105 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+107 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+108 
+i
+=0; i < 
+LENGTH
+; i++)
+
+110 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+111 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+113 
+r
+ = 
+	`Œ_s‹t
+(
+li°
+, 
+NULL
+,1);
+
+114 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <sort> siÉlÖunteroáÜa funcion criterioÉs NULL\nÜa funcion sortÑetorna -1\n");
+
+116 
+	}
+}
+
+118 
+	$s‹tTe°Ca£05
+()
+
+120 
+r
+;
+
+121 
+i
+;
+
+122 
+LökedLi°
+* 
+li°
+;
+
+123 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+125 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+126 
+i
+=0; i < 
+LENGTH
+; i++)
+
+128 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+129 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+131 
+r
+ = 
+	`Œ_s‹t
+(
+li°
+, 
+com∑ªEm∂oyì
+,-1);
+
+132 
+	`uã°_as£πEquÆsI¡Msg
+(
+r
+,-1,"\nErrorÉnÉl valor deÑetorno de <sort> siÉl ordenÉs distinto de 1 o 0\nÜa funcion sortÑetorna -1\n");
+
+134 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\subListTest.c
+
+19 
+	~"../../ã°ög/uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+27 
+	~"../../öc/LökedLi°.h
+"
+
+28 
+	~"../../ã°ög/öc/Em∂oyì.h
+"
+
+31 
+	#LENGTH
+ 5
+
+	)
+
+34 * 
+	guns‹ãdLi°
+[] = {"Za","Zb","Xd","Xb","Ya","Yc"};
+
+35 
+	g£˘‹
+[] = {1,1,2,3,4,6};
+
+36 
+	gßœry
+[] = {1000,1000,2000,3000,4000,8000};
+
+37 
+	gid
+[] = {11,20,3,4,9,99};
+
+40 
+	$subLi°Te°Sëup
+()
+
+42 
+	`uã°_¥öt
+("Setup...\r\n");
+
+43 
+	}
+}
+
+46 
+	$subLi°Te°Ca£01
+()
+
+48 
+LökedLi°
+* 
+li°
+;
+
+50 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+51 
+	`Œ_add
+(
+li°
+,
+NULL
+);
+
+53 
+	`uã°_as£πNŸNuŒMsg
+(
+	`Œ_subLi°
+(
+li°
+,0,1),"\nErrorÉnÉl valor deÑetorno de <subList> siÜosÖarametros son correctos\nno debeÑetornar NULL\n");
+
+55 
+	}
+}
+
+57 
+	$subLi°Te°Ca£02
+()
+
+59 
+i
+;
+
+60 
+LökedLi°
+* 
+li°
+;
+
+61 
+LökedLi°
+* 
+pSubLi°
+;
+
+62 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+63 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+65 
+i
+=0; i < 
+LENGTH
+; i++)
+
+67 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+68 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+71 
+pSubLi°
+ = 
+	`Œ_subLi°
+(
+li°
+,0,2);
+
+73 
+i
+=0; i < 2; i++)
+
+75 
+	`uã°_as£πEquÆsPoöãrMsg
+(
+	`Œ_gë
+(
+pSubLi°
+,
+i
+),Œ_gë(
+li°
+,i),"Error:Üa subÜistaÇo contieneÜosÉlementos solicitados");
+
+77 
+	}
+}
+
+81 
+	$subLi°Te°Ca£03
+()
+
+83 
+i
+;
+
+84 
+LökedLi°
+* 
+li°
+;
+
+85 
+LökedLi°
+* 
+pSubLi°
+;
+
+86 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+88 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+90 
+i
+=0; i < 
+LENGTH
+; i++)
+
+92 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+93 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+96 
+pSubLi°
+ = 
+	`Œ_subLi°
+(
+li°
+,-1,2);
+
+97 
+	`uã°_as£πNuŒMsg
+(
+pSubLi°
+,"\nErrorÉnÉl valor deÑetorno de <subList>Él fromÉsta fuera de indice (< 0),\n se deberiaÑetornar NULL\n");
+
+99 
+pSubLi°
+ = 
+	`Œ_subLi°
+(
+li°
+,0,6);
+
+100 
+	`uã°_as£πNuŒMsg
+(
+pSubLi°
+,"\nErrorÉnÉl valor deÑetorno de <subList>ÉlÅoÉsta fuera de indice (>Üen()),\n se deberiaÑetornar NULL\n");
+
+102 
+	}
+}
+
+104 
+	$subLi°Te°Ca£04
+()
+
+106 
+i
+;
+
+107 
+LökedLi°
+* 
+li°
+;
+
+108 
+LökedLi°
+* 
+pSubLi°
+;
+
+109 
+Em∂oyì
+* 
+pAux
+[
+LENGTH
+];
+
+111 
+li°
+ = 
+	`Œ_√wLökedLi°
+();
+
+113 
+i
+=0; i < 
+LENGTH
+; i++)
+
+115 
+pAux
+[
+i
+] = 
+	`√wEm∂oyì
+(
+id
+[i],
+uns‹ãdLi°
+[i],uns‹ãdLi°[i],
+ßœry
+[i],
+£˘‹
+[i]);
+
+116 
+	`Œ_add
+(
+li°
+,
+pAux
+[
+i
+]);
+
+119 
+pSubLi°
+ = 
+	`Œ_subLi°
+(
+NULL
+,0,2);
+
+120 
+	`uã°_as£πNuŒMsg
+(
+pSubLi°
+,"\nErrorÉnÉl valor deÑetorno de <subList> siÜaÜistaÖasadaÉs NULL\nÉl valoráÑetornarÉs (NULL)\n");
+
+121 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\utest.c
+
+19 
+	~"uã°.h
+"
+
+20 
+	~<°dio.h
+>
+
+21 
+	~<°dlib.h
+>
+
+22 
+	~<°rög.h
+>
+
+24 
+	#VERBOSE_TEST
+ 0
+
+	)
+
+26 
+	guã°_¥ötBuf„r
+[256];
+
+27 
+	guã°_¥ötEº‹Buf„r
+[409600];
+
+28 
+	guã°_ÊagTe°Eº‹
+;
+
+29 
+	guã°_löeTe°Eº‹
+;
+
+30 * 
+	guã°_fûeTe°Eº‹
+;
+
+31 
+	guã°_tŸÆTe°sCou¡î
+;
+
+32 
+	guã°_okTe°sCou¡î
+;
+
+33 
+	guã°_v¨Aux
+;
+
+35 
+	$uã°_öô
+()
+
+37 
+uã°_tŸÆTe°sCou¡î
+=0;
+
+38 
+uã°_okTe°sCou¡î
+=0;
+
+39 
+	}
+}
+
+42 
+	$uã°_¥ötSèπTe°ög
+(* 
+ã°Name
+)
+
+44 
+uã°_¥ötEº‹Buf„r
+[0] = '\0';
+
+45 
+	`uã°_¥öt
+("\r\n\r\n********************************************************************\r\n");
+
+46 
+	`uã°_¥öt1
+("*********** Sèπ Te°ög of: %20† ************\r\n",
+ã°Name
+);
+
+47 
+	`uã°_¥öt
+("********************************************************************\r\n");
+
+49 
+	}
+}
+
+50 
+	$uã°_¥ötSèti°ics
+(* 
+ã°Name
+)
+
+54 if(
+uã°_tŸÆTe°sCou¡î
+!=
+uã°_okTe°sCou¡î
+ || 
+VERBOSE_TEST
+ == 1)
+
+56 
+	`¥ötf
+(
+uã°_¥ötEº‹Buf„r
+);
+
+58 
+uã°_¥ötEº‹Buf„r
+[0] = '\0';
+
+60 
+	`uã°_¥öt
+("********************************************************************\r\n");
+
+61 
+	`uã°_¥öt1
+("******* Unô Te°†Sèti°ics: %20† ************\r\n",
+ã°Name
+);
+
+62 
+	`uã°_¥öt
+("********************************************************************\r\n");
+
+64 if(
+uã°_tŸÆTe°sCou¡î
+>0)
+
+66 
+≥r
+ = ()((()
+uã°_okTe°sCou¡î
+/()
+uã°_tŸÆTe°sCou¡î
+)*100.0);
+
+67 
+	`uã°_¥öt
+("**| Total Test | Succed Test | Failed Test | Effectiveness |**\r\n");
+
+68 
+	`uã°_¥öt4
+("**| %3d | %3d | %3d | %3dÖîc. |**\r\n",
+uã°_tŸÆTe°sCou¡î
+,
+uã°_okTe°sCou¡î
+,(uã°_tŸÆTe°sCou¡î-uã°_okTe°sCou¡î),
+≥r
+);
+
+71 
+	`uã°_¥öt
+("NoÅestsÉxecuted.\r\n");
+
+73 
+	`uã°_¥öt
+("********************************************************************\r\n\r\n");
+
+75 
+	`¥ötf
+(
+uã°_¥ötEº‹Buf„r
+);
+
+76 
+uã°_¥ötEº‹Buf„r
+[0] = '\0';
+
+77 
+	}
+}
+
+79 
+uã°_°¨tTe°
+((*
+‚cTe°
+)(),(*
+‚cBef‹e
+)(),* 
+ã°Name
+)
+
+81 if(
+‚cTe°
+!=0)
+
+83 
+	`uã°_¥öt
+("--------------------------------------------------------------------\r\n");
+
+84 
+uã°_ÊagTe°Eº‹
+=0;
+
+85 
+	`uã°_¥öt1
+("%-40s\r\n",
+ã°Name
+);
+
+87 if(
+‚cBef‹e
+!=0)
+
+88 
+	`‚cBef‹e
+();
+
+89 
+uã°_tŸÆTe°sCou¡î
+++;
+
+90 
+	`‚cTe°
+();
+
+91 if(
+uã°_ÊagTe°Eº‹
+==1)
+
+93 
+	`uã°_¥öt2
+("TEST FAILED\r\nFILE:%†LINE:%d\r\n",
+uã°_fûeTe°Eº‹
+,
+uã°_löeTe°Eº‹
+);
+
+97 
+	`uã°_¥öt
+("TEST OK\r\n");
+
+98 
+uã°_okTe°sCou¡î
+++;
+
+103 
+	}
+}
+
+	@D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\utest.h
+
+20 #i‚de‡
+UTEST_H
+
+
+21 
+	#UTEST_H
+
+
+	)
+
+23 
+	#__FILENAME__
+ (
+	`°ºchr
+(
+__FILE__
+, '/'Ë? sårchr(__FILE__, '/'Ë+ 1 : sårchr(__FILE__, '\\'Ë? sårchr(__FILE__, '\\'Ë+ 1 : __FILE__)
+
+	)
+
+26 
+	#uã°_¥öt
+(
+MSG
+Ë{ 
+	`•rötf
+(
+uã°_¥ötBuf„r
+,MSG); 
+	`°rˇt
+(
+uã°_¥ötEº‹Buf„r
+,uã°_¥ötBuf„r);}
+
+	)
+
+27 
+	#uã°_¥öt1
+(
+MSG
+,
+VAR1
+Ë{ 
+	`•rötf
+(
+uã°_¥ötBuf„r
+,MSG,VAR1); 
+	`°rˇt
+(
+uã°_¥ötEº‹Buf„r
+,uã°_¥ötBuf„r);}
+
+	)
+
+28 
+	#uã°_¥öt2
+(
+MSG
+,
+VAR1
+,
+VAR2
+Ë{ 
+	`•rötf
+(
+uã°_¥ötBuf„r
+,MSG,VAR1,VAR2); 
+	`°rˇt
+(
+uã°_¥ötEº‹Buf„r
+,uã°_¥ötBuf„r);}
+
+	)
+
+29 
+	#uã°_¥öt3
+(
+MSG
+,
+VAR1
+,
+VAR2
+,
+VAR3
+Ë{ 
+	`•rötf
+(
+uã°_¥ötBuf„r
+,MSG,VAR1,VAR2,VAR3); 
+	`°rˇt
+(
+uã°_¥ötEº‹Buf„r
+,uã°_¥ötBuf„r);}
+
+	)
+
+30 
+	#uã°_¥öt4
+(
+MSG
+,
+VAR1
+,
+VAR2
+,
+VAR3
+,
+VAR4
+Ë{ 
+	`•rötf
+(
+uã°_¥ötBuf„r
+,MSG,VAR1,VAR2,VAR3,VAR4); 
+	`°rˇt
+(
+uã°_¥ötEº‹Buf„r
+,uã°_¥ötBuf„r);}
+
+	)
+
+33 
+	#uã°_as£πEquÆsI¡
+(
+A
+,
+B
+){ if(A!=B){ 
+	`uã°_¥öt2
+("as£πÉquÆ†Áûed '%d' !'%d'\r\n",A,B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+34 
+	#uã°_as£πEquÆsFlﬂt
+(
+A
+,
+B
+){ if(A!=B){ 
+	`uã°_¥öt2
+("as£πÉquÆ†Áûed '%f' !'%f'\r\n",()A,()B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+35 
+	#uã°_as£πEquÆsPoöãr
+(
+A
+,
+B
+){ if(A!=B){ 
+	`uã°_¥öt2
+("as£πÉquÆ†Áûed '0x%x' !'0x%x'\r\n",A,B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+37 
+	#uã°_as£πNŸEquÆsI¡
+(
+A
+,
+B
+){ if(A==B){ 
+	`uã°_¥öt2
+("as£πÇŸÉquÆ†Áûed '%d' !'%d'\r\n",A,B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+38 
+	#uã°_as£πNŸEquÆsFlﬂt
+(
+A
+,
+B
+){ if(A==B){ 
+	`uã°_¥öt2
+("as£πÇŸÉquÆ†Áûed '%f' !'%f'\r\n",()A,()B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; 
+$
+
+
+	)
+
+39 
+	#uã°_as£πNŸEquÆsPoöãr
+(
+A
+,
+B
+){ if(A==B){ 
+	`uã°_¥öt2
+("as£πÇŸÉquÆ†Áûed '0x%x' !'0x%x'\r\n",A,B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+41 
+	#uã°_as£πNuŒ
+(
+A
+){ if(A!=0){ 
+	`uã°_¥öt1
+("as£πÇuŒ faûed. VÆue: '%p' \r\n",A); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+42 
+	#uã°_as£πNŸNuŒ
+(
+A
+){ if(A==0){ 
+	`uã°_¥öt1
+("as£πÇŸÇuŒ faûed. VÆue: '%p' \r\n",A); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+44 
+	#uã°_as£πEquÆsSåög
+(
+A
+,
+B
+,
+S
+) \
+
+46 
+uã°_v¨Aux
+=0; \
+
+47 
+uã°_v¨Aux
+<
+S
+) \
+
+49 if(
+A
+[
+uã°_v¨Aux
+]!=
+B
+[utest_varAux]) \
+
+51 
+	`uã°_¥öt2
+("as£πÉquÆ†°rög. VÆue: '%s' !'%s' \r\n",
+A
+,
+B
+); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; \
+
+53 
+uã°_v¨Aux
+++; \
+
+55 }
+
+	)
+
+59 
+	#uã°_as£πEquÆsI¡Msg
+(
+A
+,
+B
+,
+C
+){ if(A!=B){ 
+	`uã°_¥öt2
+("as£πÉquÆ†Áûed '%d' !'%d'\r\n",A,B);
+	`uã°_¥öt1
+("%s\r\n",C); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+60 
+	#uã°_as£πEquÆsFlﬂtMsg
+(
+A
+,
+B
+,
+C
+){ if(A!=B){ 
+	`uã°_¥öt2
+("as£πÉquÆ†Áûed '%f' !'%f'\r\n",()A,()B); 
+	`uã°_¥öt1
+("%s\r\n",C); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+61 
+	#uã°_as£πEquÆsPoöãrMsg
+(
+A
+,
+B
+,
+C
+){ if(A!=B){ 
+	`uã°_¥öt2
+("as£πÉquÆ†Áûed '%p' !'%p'\r\n",A,B);
+	`uã°_¥öt1
+("%s\r\n",C); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+63 
+	#uã°_as£πNŸEquÆsI¡Msg
+(
+A
+,
+B
+,
+C
+){ if(A==B){ 
+	`uã°_¥öt2
+("as£πÇŸÉquÆ†Áûed '%d' !'%d'\r\n",A,B); 
+	`uã°_¥öt1
+("%s\r\n",C); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+64 
+	#uã°_as£πNŸEquÆsFlﬂtMsg
+(
+A
+,
+B
+,
+C
+){ if(A==B){ 
+	`uã°_¥öt2
+("as£πÇŸÉquÆ†Áûed '%f' !'%f'\r\n",()A,()B); 
+	`uã°_¥öt1
+("%s\r\n",C); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; 
+$
+
+
+	)
+
+65 
+	#uã°_as£πNŸEquÆsPoöãrMsg
+(
+A
+,
+B
+,
+C
+){ if(A==B){ 
+	`uã°_¥öt2
+("as£πÇŸÉquÆ†Áûed '0x%x' !'0x%x'\r\n",A,B); 
+	`uã°_¥öt1
+("%s\r\n",B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+67 
+	#uã°_as£πNuŒMsg
+(
+A
+,
+B
+){ if(A!=0){ 
+	`uã°_¥öt1
+("as£πÇuŒ faûed. VÆue: '%p' \r\n",A); uã°_¥öt1("%s\r\n",B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+68 
+	#uã°_as£πNŸNuŒMsg
+(
+A
+,
+B
+){ if(A==0){ 
+	`uã°_¥öt1
+("as£πÇŸÇuŒ faûed. VÆue: '%p' \r\n",A); uã°_¥öt1("%s\r\n",B); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; } }
+
+	)
+
+70 
+	#uã°_as£πEquÆsSåögMsg
+(
+A
+,
+B
+,
+S
+,
+C
+) \
+
+72 
+uã°_v¨Aux
+=0; \
+
+73 
+uã°_v¨Aux
+<
+S
+) \
+
+75 if(
+A
+[
+uã°_v¨Aux
+]!=
+B
+[utest_varAux]) \
+
+77 
+	`uã°_¥öt2
+("as£πÉquÆ†°rög. VÆue: '%s' !'%s' \r\n",
+A
+,
+B
+); 
+	`uã°_¥öt1
+("%s\r\n",
+C
+); 
+uã°_ÊagTe°Eº‹
+=1; 
+uã°_löeTe°Eº‹
+ = 
+__LINE__
+; 
+uã°_fûeTe°Eº‹
+ = 
+__FILENAME__
+;; \
+
+79 
+uã°_v¨Aux
+++; \
+
+81 }
+
+	)
+
+83 
+uã°_¥ötBuf„r
+[256];
+
+84 
+uã°_¥ötEº‹Buf„r
+[409600];
+
+85 
+uã°_ÊagTe°Eº‹
+;
+
+86 
+uã°_löeTe°Eº‹
+;
+
+87 * 
+uã°_fûeTe°Eº‹
+;
+
+88 
+uã°_tŸÆTe°sCou¡î
+;
+
+89 
+uã°_okTe°sCou¡î
+;
+
+90 
+uã°_v¨Aux
+;
+
+92 
+uã°_öô
+();
+
+93 
+uã°_¥ötSèti°ics
+(* 
+ã°Name
+);
+
+94 
+uã°_°¨tTe°
+((*
+‚cTe°
+)(),(*
+‚cBef‹e
+)(),* 
+ã°Name
+);
+
+95 
+uã°_¥ötSèπTe°ög
+(* 
+ã°Name
+);
+
+	@../inc/LinkedList.h
+
+19 #i‚de‡
+__LINKEDLIST
+
+
+20 
+	#__LINKEDLIST
+
+
+	)
+
+21 
+	sNode
+
+
+23 * 
+	mpEÀmít
+;
+
+24 
+Node
+* 
+	mpNextNode
+;
+
+25 }
+	gNode
+;
+
+27 
+	sLökedLi°
+
+
+29 
+Node
+* 
+	mpFú°Node
+;
+
+30 
+	msize
+;
+
+31 }
+	gLökedLi°
+;
+
+37 
+LökedLi°
+* 
+Œ_√wLökedLi°
+();
+
+39 
+Œ_Àn
+(
+LökedLi°
+* 
+this
+);
+
+40 
+Node
+* 
+ã°_gëNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+);
+
+41 
+ã°_addNode
+(
+LökedLi°
+* 
+this
+, 
+nodeIndex
+,* 
+pEÀmít
+);
+
+42 
+Œ_add
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+);
+
+43 * 
+Œ_gë
+(
+LökedLi°
+* 
+this
+, 
+ödex
+);
+
+44 
+Œ_£t
+(
+LökedLi°
+* 
+this
+, 
+ödex
+,* 
+pEÀmít
+);
+
+45 
+Œ_ªmove
+(
+LökedLi°
+* 
+this
+,
+ödex
+);
+
+46 
+Œ_˛ór
+(
+LökedLi°
+* 
+this
+);
+
+47 
+Œ_dñëeLökedLi°
+(
+LökedLi°
+* 
+this
+);
+
+48 
+Œ_ödexOf
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+);
+
+49 
+Œ_isEm±y
+(
+LökedLi°
+* 
+this
+);
+
+50 
+Œ_push
+(
+LökedLi°
+* 
+this
+, 
+ödex
+, * 
+pEÀmít
+);
+
+51 * 
+Œ_p›
+(
+LökedLi°
+* 
+this
+,
+ödex
+);
+
+52 
+Œ_c⁄èös
+(
+LökedLi°
+* 
+this
+, * 
+pEÀmít
+);
+
+53 
+Œ_c⁄èösAŒ
+(
+LökedLi°
+* 
+this
+,LökedLi°* 
+this2
+);
+
+54 
+LökedLi°
+* 
+Œ_subLi°
+(LökedLi°* 
+this
+,
+‰om
+,
+to
+);
+
+55 
+LökedLi°
+* 
+Œ_˛⁄e
+(LökedLi°* 
+this
+);
+
+56 
+Œ_s‹t
+(
+LökedLi°
+* 
+this
+, (*
+pFunc
+)(* ,*), 
+‹dî
+);
+
+	@../testing/inc/main_test.h
+
+19 
+°¨tTe°ög
+(
+ã°Group
+);
+
+	@
+1
+.
+1
+/usr/include
+49
+3326
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\inc\LinkedList.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\src\LinkedList.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\src\main.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\Employee.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\addNodeTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\addTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\clearTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\cloneTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\containsAllTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\containsTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\deleteLinkedListTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\getNodeTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\getTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\indexOfTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\isEmptyTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\lenTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\main_test.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\newTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\popTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\pushTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\removeTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\setTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\sortTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\inc\subListTest.h
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\Employee.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\addNodeTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\addTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\clearTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\cloneTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\containsAllTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\containsTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\deleteLinkedListTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\getNodeTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\getTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\indexOfTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\isEmptyTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\lenTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\main_test.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\newTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\popTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\pushTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\removeTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\setTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\sortTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\src\subListTest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\utest.c
+D:\UTN\OneDrive\Programacion_I\TPs\LinkedList\testing\utest.h
+../inc/LinkedList.h
+../testing/inc/main_test.h
