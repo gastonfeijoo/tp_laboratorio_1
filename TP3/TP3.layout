@@ -2,64 +2,64 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="UI.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UI.c" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="151" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="utn.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5912" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Controller.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="228" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="292" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="UI.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="268" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Controller.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="LinkedList.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="331" topLine="0" />
+			<Cursor1 position="1561" topLine="24" />
 		</Cursor>
 	</File>
-	<File name="parser.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="utn.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="673" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="parser.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="154" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="UI.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Employee.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2043" topLine="64" />
+			<Cursor1 position="848" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Employee.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+	<File name="Controller.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="52" topLine="15" />
+			<Cursor1 position="1485" topLine="141" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="parser.c" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1558" topLine="25" />
+			<Cursor1 position="2653" topLine="34" />
 		</Cursor>
 	</File>
-	<File name="Employee.c" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+	<File name="Employee.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3876" topLine="179" />
-		</Cursor>
-	</File>
-	<File name="utn.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="673" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="utn.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5912" topLine="134" />
-		</Cursor>
-	</File>
-	<File name="LinkedList.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1561" topLine="37" />
-		</Cursor>
-	</File>
-	<File name="Controller.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="7479" topLine="278" />
-		</Cursor>
-	</File>
-	<File name="parser.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="125" topLine="6" />
+			<Cursor1 position="1752" topLine="99" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
