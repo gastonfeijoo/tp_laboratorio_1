@@ -39,6 +39,7 @@ void removeTestCase01(void)
     list = ll_newLinkedList();
     ll_add(list,NULL);
     r = ll_remove(list,0);
+    printf("Test Case 1\n");
     utest_assertEqualsIntMsg(r,0,"\nError en el valor de retorno de <remove> si los parametros son correctos es 0\n");
 }
 
@@ -54,6 +55,9 @@ void removeTestCase02(void)
     ll_add(list,pElement2);
     ll_remove(list,1);
     pElement = ll_get(list,1);
+
+    printf("Test Case 2\n");
+
     utest_assertEqualsPointerMsg(pElement,pElement2,"\nError en el valor de retorno de <get> al solicitar \nun elemento luego de eliminar su antecesor\n");
     utest_assertEqualsIntMsg(ll_len(list),2,"\nError en el len() de la lista luego de quitar un elemento");
 }
@@ -67,6 +71,7 @@ void removeTestCase03(void)
     r = ll_remove(list,-1);
     utest_assertEqualsIntMsg(r,-1,"\nError en el valor de retorno de <remove> al intentar eliminar un elemento fuera de indice (< 0),\n se deberia retornar -1\n");
     r = ll_remove(list,1);
+    printf("Test Case 3\n");
     utest_assertEqualsIntMsg(r,-1,"\nError en el valor de retorno de <remove> al intentar eliminar un elemento fuera de indice (>= ll_len),\n se deberia retornar -1\n");
 }
 
@@ -74,5 +79,6 @@ void removeTestCase04(void)
 {
     int r;
     r = ll_remove(NULL,0);
+    printf("Test Case 4\n");
     utest_assertEqualsIntMsg(r,-1,"\nError en el valor de retorno de <remove> si la lista pasada es NULL\n el valor a retornar es (-1)\n");
 }
